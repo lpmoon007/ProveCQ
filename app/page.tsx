@@ -66,7 +66,7 @@ const FLYWHEEL = [
     tag: "KEEP",
     title: "Better Every Day",
     body: "Keep your proven players growing and in motion — so your best don't burn out next to passengers.",
-    link: { href: "/better-every-day", label: "More →" },
+    link: { href: "/better-every-day", label: "Keep proven players growing →" },
   },
 ];
 
