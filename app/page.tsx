@@ -348,7 +348,7 @@ export default function HomePage() {
             </p>
           </div>
           <div>
-            <ButtonLink href="/eos" variant="on-green">
+            <ButtonLink href="/for-eos" variant="on-green">
               Where EOS stops, Prove goes deeper &rarr;
             </ButtonLink>
           </div>

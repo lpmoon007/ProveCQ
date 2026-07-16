@@ -37,7 +37,7 @@ const OFFERS = [
     price: null,
     body: "Bring a real capacity-measurement tool to your clients. Prove plugs into the People Analyzer and Quarterly Conversations — hard data to pair with your EOS discipline.",
     best: "Best for: implementers & advisors.",
-    cta: { label: "See the EOS fit", href: "/eos", variant: "dark" as const },
+    cta: { label: "See the EOS fit", href: "/for-eos", variant: "dark" as const },
   },
 ];
 

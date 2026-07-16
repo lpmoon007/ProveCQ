@@ -19,7 +19,7 @@ function FooterLink({ href, label }: { href: string; label: string }) {
 export default function Footer() {
   return (
     <footer className="bg-ink-2 px-5 pb-10 pt-[54px] text-[#8C877A] sm:px-8 on-dark">
-      <div className="mx-auto grid max-w-content gap-9 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+      <div className="mx-auto grid max-w-content grid-cols-2 gap-9 md:grid-cols-[1.5fr_1fr_1fr_1fr_1fr]">
         <div>
           <div className="mb-3 flex items-center gap-2.5 text-paper">
             <BrandMark size={30} />

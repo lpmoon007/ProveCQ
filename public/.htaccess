@@ -1,0 +1,41 @@
+# provecq.com — Apache/Plesk config for the static export.
+# Shipped from public/ → copied into out/ at build → rsync'd to httpdocs.
+#
+# Two jobs: (1) the FPO → Prove 301 migration, and (2) serve the prerendered
+# .html files without their extension (so /guides/foo resolves to foo.html).
+
+Options -MultiViews
+RewriteEngine On
+
+# ---------------------------------------------------------------------------
+# 1. 301 redirects — must run BEFORE the extensionless rewrite below.
+#    (Mirror of the map in prototype/Sitemap-Redirects.dc.html.)
+# ---------------------------------------------------------------------------
+
+# Internal canonical renames
+RewriteRule ^eos/?$                         /for-eos [R=301,L]
+RewriteRule ^eos/(.*)$                       /for-eos/$1 [R=301,L]
+RewriteRule ^free-tools/hidden-gem/?$        /free-tools/hidden-gem-identifier [R=301,L]
+
+# Retired FPO shell → Prove equivalents
+RewriteRule ^services/?$                     /work-with-us [R=301,L]
+RewriteRule ^get-to-green/?$                 /free-tools/get-to-green [R=301,L]
+RewriteRule ^get-to-green-app/?$             /free-tools/get-to-green [R=301,L]
+RewriteRule ^playbook/?$                     /free-tools [R=301,L]
+RewriteRule ^team/?$                         /about [R=301,L]
+RewriteRule ^lifecycle/?$                    /guides [R=301,L]
+RewriteRule ^resources/?$                    /guides [R=301,L]
+
+# FPO keyword slugs → the /guides layer (hub until each spoke is migrated)
+RewriteRule ^(what-is-a-fractional-chro|what-does-a-cpo-do|cost|vs-consultant|vs-peo|7-signs|turnover|culture|due-diligence|onboarding|for-pe|hr-systems)/?$ /guides [R=301,L]
+
+# ---------------------------------------------------------------------------
+# 2. Serve prerendered .html without the extension.
+# ---------------------------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# Custom 404 (Next emits out/404.html)
+ErrorDocument 404 /404.html

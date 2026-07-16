@@ -34,18 +34,22 @@ const DEEPER = [
   {
     title: "The Capacity problem in GWC",
     body: "Why the third letter is a guess — and how behavior fixes it.",
+    href: "/for-eos/capacity",
   },
   {
     title: "A real Capacity score for the People Analyzer",
     body: "Keep GWC; replace the Capacity guess with evidence.",
+    href: "/for-eos/people-analyzer",
   },
   {
     title: "Better Quarterly Conversations",
     body: "Objective behavioral data for a fairer conversation.",
+    href: "/for-eos/quarterly-conversations",
   },
   {
     title: "For EOS Implementers",
     body: "The capacity tool you've never had — a complement to your practice.",
+    href: "/for-eos/implementers",
   },
 ];
 
@@ -189,7 +193,7 @@ export default function EosPage() {
             {DEEPER.map((d) => (
               <Link
                 key={d.title}
-                href="/guides"
+                href={d.href}
                 className="rounded-[18px] border border-edge-light bg-white p-7 transition-colors hover:border-green"
               >
                 <h3 className="mb-2 text-[18px] font-bold">{d.title}</h3>

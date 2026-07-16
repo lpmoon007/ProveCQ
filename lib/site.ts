@@ -17,7 +17,7 @@ export const site = {
 /** Primary nav (dark header). */
 export const navLinks = [
   { label: "How it works", href: "/how-it-works" },
-  { label: "For EOS", href: "/eos" },
+  { label: "For EOS", href: "/for-eos" },
   { label: "Free tools", href: "/free-tools" },
   { label: "Guides", href: "/guides" },
   { label: "About", href: "/about" },
@@ -31,15 +31,26 @@ export const footerCols = [
     links: [
       { label: "How it works", href: "/how-it-works" },
       { label: "The Heatmap", href: "/heatmap" },
+      { label: "Free tools", href: "/free-tools" },
       { label: "Better Every Day", href: "/better-every-day" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "For EOS", href: "/eos" },
+      { label: "For EOS", href: "/for-eos" },
       { label: "About", href: "/about" },
+      { label: "Case studies", href: "/case-studies" },
       { label: "Work with us", href: "/work-with-us" },
+    ],
+  },
+  {
+    title: "Learn",
+    links: [
+      { label: "Guides", href: "/guides" },
+      { label: "FAQ", href: "/faq" },
+      { label: "Glossary", href: "/glossary" },
+      { label: "What CQ is & isn't", href: "/ethics" },
     ],
   },
   {

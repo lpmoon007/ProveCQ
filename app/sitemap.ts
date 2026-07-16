@@ -1,19 +1,61 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
 
+// Emit /sitemap.xml as a static file for the export build.
+export const dynamic = "force-static";
+
 const ROUTES = [
+  // Core
   "",
   "/how-it-works",
-  "/eos",
+  "/for-eos",
   "/certainty-gap",
   "/better-every-day",
   "/work-with-us",
   "/about",
   "/contact",
   "/heatmap",
-  "/free-tools",
-  "/guides",
   "/ethics",
+  "/faq",
+  "/glossary",
+  // Free tools
+  "/free-tools",
+  "/free-tools/certainty-diagnostic",
+  "/free-tools/4am-test",
+  "/free-tools/hidden-gem-identifier",
+  "/free-tools/scorecard",
+  "/free-tools/cost-of-a-bad-bet",
+  "/free-tools/get-to-green",
+  // EOS spokes
+  "/for-eos/capacity",
+  "/for-eos/people-analyzer",
+  "/for-eos/quarterly-conversations",
+  "/for-eos/implementers",
+  // Case studies
+  "/case-studies",
+  "/case-studies/accountability",
+  "/case-studies/ownership",
+  "/case-studies/snapshot",
+  // Guides
+  "/guides",
+  "/guides/who-to-promote",
+  "/guides/promote-vs-hire",
+  "/guides/failed-promotion",
+  "/guides/hire-for-follow-through",
+  "/guides/cost-of-a-bad-hire",
+  "/guides/high-potential-employees",
+  "/guides/leadership-bench",
+  "/guides/succession-planning",
+  "/guides/quiet-quitting",
+  "/guides/burned-out-top-performers",
+  "/guides/how-to-delegate",
+  "/guides/first-90-days",
+  "/guides/measure-commitment",
+  "/guides/measure-capacity-in-eos",
+  "/guides/behavioral-vs-personality-tests",
+  "/guides/cq-vs-engagement-surveys",
+  "/guides/its-the-metric",
+  "/guides/state-of-engagement",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

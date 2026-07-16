@@ -5,9 +5,24 @@ import { Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
 
 export const metadata: Metadata = {
-  title: "Better Every Day — Keep Your Proven Players in Motion",
+  title:
+    "Better Every Day — A High-Potential Development Program for Proven Players",
   description:
-    "Better Every Day is a behavioral system that keeps your high-CQ, proven players growing and in motion — so your best people don't burn out next to passengers. Weekly tracking, monthly commitments, drift alerts.",
+    "Better Every Day is a high-potential development program that keeps your high-CQ, proven players growing and in motion — so your best people don't burn out next to passengers. Weekly tracking, monthly commitments, drift alerts.",
+  keywords: [
+    "high potential development program",
+    "high potential leadership program",
+    "leadership development for SMBs",
+    "employee retention program",
+  ],
+  alternates: { canonical: "/better-every-day" },
+  openGraph: {
+    title: "Better Every Day — High-Potential Development Program",
+    description:
+      "Keep your proven, high-potential players growing with weekly tracking, monthly commitments, and drift alerts.",
+    url: "/better-every-day",
+    type: "website",
+  },
 };
 
 const PILLARS = [

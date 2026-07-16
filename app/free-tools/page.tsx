@@ -13,17 +13,24 @@ export const metadata: Metadata = {
 };
 
 /**
- * The free-tool funnel ladder (handoff §6). Interactive tool pages are Phase 2;
- * until they ship, every card routes to the universal funnel end — "book a call"
- * (handoff: "Every tool → book a call").
+ * The free-tool funnel ladder (handoff §6). Each card links to its live tool
+ * page; the end-of-flow "Book a call" is the only HubSpot hop.
  */
-const TOOLS = [
+const TOOLS: {
+  label: string;
+  title: string;
+  body: string;
+  cta: string;
+  dark: boolean;
+  href: string;
+}[] = [
   {
     label: "2 minutes · instant",
     title: "The Certainty Diagnostic",
     body: "Ten quick questions, one honest number: how much proof (versus gut feel) is behind your hiring, promotion, and retention calls. Instant Certainty Score.",
     cta: "Take the diagnostic",
     dark: false,
+    href: "/free-tools/certainty-diagnostic",
   },
   {
     label: "3 minutes · one person",
@@ -31,6 +38,7 @@ const TOOLS = [
     body: "Handed someone a big responsibility and now lying awake wondering? Grade one person on ownership, initiative, growth, and courage — using the last 90 days.",
     cta: "Take the 4 AM Test",
     dark: false,
+    href: "/free-tools/4am-test",
   },
   {
     label: "5 minutes · emailed",
@@ -38,6 +46,7 @@ const TOOLS = [
     body: "Find the two people every leader overlooks — the quiet performer who doesn't want the spotlight, and the striver stuck in the wrong seat.",
     cta: "Find your hidden gems",
     dark: false,
+    href: "/free-tools/hidden-gem-identifier",
   },
   {
     label: "Interactive · 146 points",
@@ -45,6 +54,7 @@ const TOOLS = [
     body: "The full people-systems readiness map — 7 macro and 30+ micro systems scored red, yellow, or green. Play with the live sample, then unlock your own.",
     cta: "Open Get to Green",
     dark: false,
+    href: "/free-tools/get-to-green",
   },
   {
     label: "Calculator · instant",
@@ -52,6 +62,7 @@ const TOOLS = [
     body: "Estimate what one wrong promotion or bad hire actually costs — salary, lost productivity, team drag, and backfill — and what proving it first could save.",
     cta: "Run the numbers",
     dark: true,
+    href: "/free-tools/cost-of-a-bad-bet",
   },
   {
     label: "90 seconds · instant",
@@ -59,6 +70,7 @@ const TOOLS = [
     body: "Six questions on whether you're growing and keeping your high-potential people — or quietly losing them. Instant rating and next move.",
     cta: "Take the scorecard",
     dark: false,
+    href: "/free-tools/scorecard",
   },
 ];
 
@@ -82,15 +94,11 @@ export default function FreeToolsPage() {
 
       <Section tone="paper">
         <Container>
-          <p className="mx-auto mb-8 max-w-[720px] rounded-[14px] border border-edge-light bg-paper-2 px-5 py-3.5 text-center text-[14px] text-content-muted">
-            The interactive tools are rolling out next. In the meantime,
-            book a call and we&rsquo;ll run any of them with you.
-          </p>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {TOOLS.map((t) => (
               <Link
                 key={t.title}
-                href="/contact"
+                href={t.href}
                 className={`flex flex-col rounded-[18px] p-7 transition-colors ${
                   t.dark
                     ? "bg-ink text-paper on-dark hover:bg-ink-2"

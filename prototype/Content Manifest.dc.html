@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Content Manifest — provecq.com (source-file inventory)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Figtree:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #F6F3EC; font-family: 'Figtree', sans-serif; color: #1B1913; -webkit-font-smoothing: antialiased; }
+  a { color: #1F8B57; }
+  code { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; background:#EFE9DC; padding:1px 5px; border-radius:4px; }
+  h2 { font-family:'Space Grotesk',sans-serif; font-weight:700; letter-spacing:-.02em; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  th { text-align:left; background:#14130E; color:#F6F3EC; padding:10px 12px; font-family:'Space Grotesk',sans-serif; font-size:12.5px; letter-spacing:.03em; }
+  td { padding:10px 12px; border-bottom:1px solid #E4DCCC; vertical-align:top; line-height:1.5; }
+  td:first-child { white-space:nowrap; }
+  tr:nth-child(even) td { background:#FBF8F2; }
+</style>
+</head>
+<body>
+<div style="max-width:1000px; margin:0 auto; padding:56px 32px 100px;">
+
+  <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
+    <span style="width:32px; height:32px; border-radius:9px; background:#1F8B57; display:inline-flex; align-items:center; justify-content:center; color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700;">P</span>
+    <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px;">Prove &middot; provecq.com</span>
+  </div>
+  <div style="font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#1F8B57; font-weight:700; margin-bottom:10px;">Content manifest</div>
+  <h1 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:38px; line-height:1.05; letter-spacing:-.02em; margin:0 0 14px;">Every page already exists. Port it — don't stub it.</h1>
+  <p style="font-size:16px; line-height:1.65; color:#3A362C; margin:0 0 8px;">Read with <code>Claude Code Handoff.dc.html</code>. Each row is a finished prototype file in this folder with complete copy and (where noted) working React logic. Pull copy + interaction from the source file; do <strong>not</strong> route these to <code>/contact</code>. Tool CTAs link to the tool page; only the end-of-flow "book a call" goes to HubSpot.</p>
+  <p style="font-size:13.5px; color:#8A8474; margin:0 0 32px;">Files are <code>.dc.html</code> prototypes: each has a <code>&lt;helmet&gt;</code> (title/meta/JSON-LD to reuse) + inline-styled markup. Logic lives in the <code>&lt;script data-dc-script&gt;</code> class near the bottom.</p>
+
+  <h2 style="font-size:22px; margin:0 0 12px;">Free tools <span style="font-size:14px; color:#8A8474; font-weight:400;">— interactive, real logic</span></h2>
+  <table>
+    <tr><th>Card / route</th><th>Source file</th><th>What it does &amp; where CTAs go</th></tr>
+    <tr><td>Certainty Diagnostic</td><td><code>Diagnostic.dc.html</code></td><td>10 questions → weighted Certainty Score (R/A/G) + top exposures. Ungated. End CTA → HubSpot.</td></tr>
+    <tr><td>Hidden Gem Identifier</td><td><code>HiddenGem.dc.html</code></td><td>Lead magnet; HubSpot form embedded (portal 20276071, form 7f180c70…). Loader in <code>&lt;helmet&gt;</code>, container mounted in <code>componentDidMount</code> — keep it out of the React tree.</td></tr>
+    <tr><td>The 4 AM Test</td><td><code>FourAMTest.dc.html</code></td><td>Pick one person, grade four 90-day questions A–F → live verdict. Ungated.</td></tr>
+    <tr><td>Talent Development Scorecard</td><td><code>Scorecard.dc.html</code></td><td>6 questions (1–5) → /30 rating with 4 bands + next move. Ungated.</td></tr>
+    <tr><td>ROI / cost-of-wrong-bet</td><td><code>ROICalculator.dc.html</code></td><td>Inputs (salary, team size, etc.) → estimated cost of a wrong bet. Ungated.</td></tr>
+    <tr><td>Get to Green</td><td><code>GetToGreen.dc.html</code> + <code>gtg-data.js</code></td><td>146-item HR-systems scoreboard, category-weighted RYG readiness. Open demo now; "create free account" is the DB/auth later-phase (self-serve, per-company data).</td></tr>
+    <tr><td>CQ Heatmap</td><td><code>Heatmap.dc.html</code></td><td>Interactive team demo: filter by tier, sort by trait, click a person for read + founder action + risk. Auth/persistence is later-phase; the view + scoring display are done.</td></tr>
+    <tr><td>Free Tools hub</td><td><code>FreeTools.dc.html</code></td><td>Cards linking the six tools above. Card CTAs → tool pages (not /contact).</td></tr>
+  </table>
+
+  <h2 style="font-size:22px; margin:36px 0 12px;">Guides <span style="font-size:14px; color:#8A8474; font-weight:400;">— full articles, GEO-structured</span></h2>
+  <table>
+    <tr><th>Topic</th><th>Source file</th></tr>
+    <tr><td>Who to promote</td><td><code>Guide-WhoToPromote.dc.html</code></td></tr>
+    <tr><td>Promote vs. hire externally</td><td><code>Guide-PromoteVsHire.dc.html</code></td></tr>
+    <tr><td>Why a promotion failed</td><td><code>Guide-FailedPromotion.dc.html</code></td></tr>
+    <tr><td>Hire for follow-through</td><td><code>Guide-HireFollowThrough.dc.html</code></td></tr>
+    <tr><td>Cost of a bad hire</td><td><code>Guide-CostOfBadHire.dc.html</code></td></tr>
+    <tr><td>Spot high-potential employees</td><td><code>Guide-HighPotential.dc.html</code></td></tr>
+    <tr><td>Build a leadership bench</td><td><code>Guide-LeadershipBench.dc.html</code></td></tr>
+    <tr><td>Succession planning (SMB)</td><td><code>Guide-Succession.dc.html</code></td></tr>
+    <tr><td>Quiet quitting / disengagement</td><td><code>Guide-QuietQuitting.dc.html</code></td></tr>
+    <tr><td>Burned-out top performers</td><td><code>Guide-BurnedOut.dc.html</code></td></tr>
+    <tr><td>Learn to delegate</td><td><code>Guide-Delegate.dc.html</code></td></tr>
+    <tr><td>First 90 days / onboarding</td><td><code>Guide-First90Days.dc.html</code></td></tr>
+    <tr><td>Measure commitment</td><td><code>Guide-MeasureCommitment.dc.html</code></td></tr>
+    <tr><td>Measure capacity in EOS</td><td><code>Guide-MeasureCapacityEOS.dc.html</code></td></tr>
+    <tr><td>Behavioral vs. personality tests</td><td><code>Guide-BehavioralVsPersonality.dc.html</code></td></tr>
+    <tr><td>CQ vs. engagement surveys</td><td><code>Guide-VsEngagementSurveys.dc.html</code></td></tr>
+    <tr><td>Guides hub / index</td><td><code>Guides.dc.html</code></td></tr>
+  </table>
+
+  <h2 style="font-size:22px; margin:36px 0 12px;">Core, EOS, proof &amp; reference</h2>
+  <table>
+    <tr><th>Page</th><th>Source file</th></tr>
+    <tr><td>Home</td><td><code>Home.dc.html</code></td></tr>
+    <tr><td>How Prove works</td><td><code>HowItWorks.dc.html</code></td></tr>
+    <tr><td>Work with us / pricing</td><td><code>WorkWithUs.dc.html</code> (Sprint $10k/35/+$100; BED $500 + $150/seat)</td></tr>
+    <tr><td>Better Every Day</td><td><code>BetterEveryDay.dc.html</code></td></tr>
+    <tr><td>About / team</td><td><code>About.dc.html</code> (james-carter.jpeg + <code>team/</code> photos)</td></tr>
+    <tr><td>Contact</td><td><code>Contact.dc.html</code></td></tr>
+    <tr><td>The Certainty Gap (manifesto)</td><td><code>CertaintyGap.dc.html</code></td></tr>
+    <tr><td>The metric is wrong (Gallup teardown)</td><td><code>Metric.dc.html</code></td></tr>
+    <tr><td>2026 State of Engagement report</td><td><code>StateOfEngagement.dc.html</code> (References section — keep current)</td></tr>
+    <tr><td>What CQ is &amp; isn't (ethics)</td><td><code>Ethics.dc.html</code> — behavioral not psychometric; not a judgment; decision-support only</td></tr>
+    <tr><td>FAQ</td><td><code>FAQ.dc.html</code> (FAQPage schema)</td></tr>
+    <tr><td>Glossary</td><td><code>Glossary.dc.html</code> (DefinedTermSet schema)</td></tr>
+    <tr><td>EOS hub + spokes</td><td><code>EOS.dc.html</code>, <code>EOS-Capacity.dc.html</code>, <code>EOS-PeopleAnalyzer.dc.html</code>, <code>EOS-QuarterlyConversations.dc.html</code>, <code>EOS-Implementers.dc.html</code></td></tr>
+    <tr><td>Case studies</td><td><code>CaseStudies.dc.html</code>, <code>CaseStudy-Accountability.dc.html</code>, <code>CaseStudy-Ownership.dc.html</code>, <code>CaseStudy-Snapshot.dc.html</code></td></tr>
+    <tr><td>Sitemap + FPO→Prove redirects</td><td><code>Sitemap-Redirects.dc.html</code></td></tr>
+    <tr><td>Build brief</td><td><code>Claude Code Handoff.dc.html</code></td></tr>
+  </table>
+
+  <div style="margin-top:36px; padding:22px 24px; background:#14130E; color:#B8B4A6; border-radius:14px; font-size:14px; line-height:1.6;">
+    <strong style="color:#F6F3EC;">Genuinely later-phase (not content gaps):</strong> Get to Green accounts (auth + per-company DB), Heatmap persistence, and Better Every Day tracking. Everything else in this manifest is finished copy/logic ready to port now.
+  </div>
+
+</div>
+</body>
+</html>
