@@ -1,0 +1,41 @@
+name: Deploy to server
+
+# Runs on every merge/push to the production branch (i.e. after a PR is merged),
+# and can be triggered by hand from the Actions tab.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Never let two deploys run at once; let an in-flight deploy finish.
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy over SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          # Build on the server so the server's own .env / secrets are used.
+          # Requires: git, Node 20+, npm, and pm2 already installed (see DEPLOY.md).
+          script: |
+            set -euo pipefail
+            cd "${{ secrets.DEPLOY_PATH }}"
+            echo "→ Fetching latest main"
+            git fetch --all --prune
+            git reset --hard origin/main
+            echo "→ Installing dependencies"
+            npm ci
+            echo "→ Building"
+            npm run build
+            echo "→ Reloading app (zero-downtime)"
+            pm2 startOrReload ecosystem.config.js --update-env
+            pm2 save
+            echo "✓ Deploy complete"
