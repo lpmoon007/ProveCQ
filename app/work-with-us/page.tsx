@@ -28,7 +28,7 @@ const OFFERS = [
     price: "$500/mo base + $150/active seat",
     body: "Once players are proven, keep them growing and in motion with weekly tracking, monthly commitments, and drift alerts — the development function SMBs never had. Subscription, per active seat.",
     best: "Best for: keeping your proven core sharp.",
-    cta: { label: "Learn more", href: "/better-every-day", variant: "dark" as const },
+    cta: { label: "See Better Every Day", href: "/better-every-day", variant: "dark" as const },
   },
   {
     label: "Partners",

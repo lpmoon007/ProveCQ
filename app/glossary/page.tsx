@@ -86,7 +86,7 @@ const TERMS: { term: ReactNode; def: ReactNode }[] = [
       <>
         The EOS test for whether a person fits a seat. Capacity is the vaguest of
         the three — the component Prove makes measurable.{" "}
-        <Link href="/for-eos/capacity">More &rarr;</Link>
+        <Link href="/for-eos/capacity">How Prove measures capacity &rarr;</Link>
       </>
     ),
   },
@@ -105,7 +105,7 @@ const TERMS: { term: ReactNode; def: ReactNode }[] = [
       <>
         Doing the minimum and no more — disengagement that looks like retention on
         a headcount report but withholds discretionary effort.{" "}
-        <Link href="/guides/quiet-quitting">More &rarr;</Link>
+        <Link href="/guides/quiet-quitting">Spot quiet quitting early &rarr;</Link>
       </>
     ),
   },
@@ -124,7 +124,7 @@ const TERMS: { term: ReactNode; def: ReactNode }[] = [
       <>
         How well a new hire performs and stays. Best assessed by behavior in the
         first 90 days, not by resume or interview impression.{" "}
-        <Link href="/guides/first-90-days">More &rarr;</Link>
+        <Link href="/guides/first-90-days">Prove a hire in 90 days &rarr;</Link>
       </>
     ),
   },
@@ -134,7 +134,7 @@ const TERMS: { term: ReactNode; def: ReactNode }[] = [
       <>
         The tendency to promote people to the level of their incompetence —
         rewarding past performance with a role that needs different behavior.{" "}
-        <Link href="/guides/failed-promotion">More &rarr;</Link>
+        <Link href="/guides/failed-promotion">Why good people fail after promotion &rarr;</Link>
       </>
     ),
   },
@@ -144,7 +144,7 @@ const TERMS: { term: ReactNode; def: ReactNode }[] = [
       <>
         The pattern of engagement scores falling while business performance holds —
         evidence that engagement and results were never the same thing.{" "}
-        <Link href="/guides/state-of-engagement">More &rarr;</Link>
+        <Link href="/guides/state-of-engagement">The engagement paradox, explained &rarr;</Link>
       </>
     ),
   },
