@@ -1,0 +1,33 @@
+# Prove — Commitment Quotient
+
+> Prove gives founders and CEOs behavioral proof of who will actually deliver — before they promote, hire, or hand over the keys. It measures three behaviors that predict follow-through — Initiative, Applied Grit, and Learnability — and combines them into the Commitment Quotient (CQ). A Be Legendary company.
+
+Prove measures observed behavior in a work context, not personality. It is decision-support for leaders, never an automated hire/fire tool, and a low CQ is information, not a judgment of a person's worth.
+
+## Product
+- [How Prove works](https://provecq.com/how-it-works): Snapshot (15 min) → Validation (6 weeks, 40+ datapoints) → Decision.
+- [The CQ Heatmap](https://provecq.com/heatmap): interactive demo scoring a team on Initiative, Applied Grit, and Learnability.
+- [Better Every Day](https://provecq.com/better-every-day): subscription that keeps proven, high-CQ players growing.
+- [For EOS](https://provecq.com/for-eos): make the GWC "Capacity" box real with behavioral data.
+- [Work with us / pricing](https://provecq.com/work-with-us): Prove Sprint and Better Every Day.
+
+## Free tools
+- [Certainty Diagnostic](https://provecq.com/free-tools/certainty-diagnostic): 10 questions → your Certainty Score.
+- [The 4 AM Test](https://provecq.com/free-tools/4am-test): grade one person's last 90 days.
+- [Hidden Gem Identifier](https://provecq.com/free-tools/hidden-gem-identifier): find the people you overlook.
+- [Get to Green](https://provecq.com/free-tools/get-to-green): a 146-point people-systems readiness map.
+- [Cost of a Bad Bet](https://provecq.com/free-tools/cost-of-a-bad-bet): estimate the cost of one wrong hire or promotion.
+
+## Guides
+- [How to identify high-potential employees](https://provecq.com/guides/high-potential-employees)
+- [How to know who to promote](https://provecq.com/guides/who-to-promote)
+- [The real cost of a bad hire](https://provecq.com/guides/cost-of-a-bad-hire)
+- [How to measure capacity in EOS](https://provecq.com/guides/measure-capacity-in-eos)
+- [All guides](https://provecq.com/guides)
+
+## Reference
+- [What CQ is & isn't (ethics & fair use)](https://provecq.com/ethics)
+- [FAQ](https://provecq.com/faq)
+- [Glossary](https://provecq.com/glossary)
+- [About](https://provecq.com/about)
+- [Contact / book a call](https://provecq.com/contact)
