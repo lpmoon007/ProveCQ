@@ -5,7 +5,8 @@
 export const site = {
   name: "Prove",
   legalName: "Be Legendary",
-  domain: "https://www.provecq.com",
+  // Non-www is the canonical host (Plesk serves provecq.com and 301s www → non-www).
+  domain: "https://provecq.com",
   tagline: "Stop betting on the wrong people.",
   description:
     "Prove gives founders and CEOs behavioral proof of who will deliver — before they promote, hire, or hand over the keys. Powered by the Commitment Quotient (Initiative, Applied Grit, Learnability).",

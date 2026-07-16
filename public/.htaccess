@@ -1,41 +1,70 @@
 # provecq.com — Apache/Plesk config for the static export.
 # Shipped from public/ → copied into out/ at build → rsync'd to httpdocs.
-#
-# Two jobs: (1) the FPO → Prove 301 migration, and (2) serve the prerendered
-# .html files without their extension (so /guides/foo resolves to foo.html).
 
-Options -MultiViews
+Options -MultiViews -Indexes
+# Don't let Apache 301 /for-eos → /for-eos/ (those section hubs are a .html file
+# AND a folder of child pages; the folder has no index, so the slash 404s).
+DirectorySlash Off
+
 RewriteEngine On
 
 # ---------------------------------------------------------------------------
-# 1. 301 redirects — must run BEFORE the extensionless rewrite below.
-#    (Mirror of the map in prototype/Sitemap-Redirects.dc.html.)
+# 1. FPO → Prove 301 migration (must run before the generic rules below).
+#    Mirror of prototype/Sitemap-Redirects.dc.html.
 # ---------------------------------------------------------------------------
-
-# Internal canonical renames
-RewriteRule ^eos/?$                         /for-eos [R=301,L]
-RewriteRule ^eos/(.*)$                       /for-eos/$1 [R=301,L]
-RewriteRule ^free-tools/hidden-gem/?$        /free-tools/hidden-gem-identifier [R=301,L]
-
-# Retired FPO shell → Prove equivalents
-RewriteRule ^services/?$                     /work-with-us [R=301,L]
-RewriteRule ^get-to-green/?$                 /free-tools/get-to-green [R=301,L]
-RewriteRule ^get-to-green-app/?$             /free-tools/get-to-green [R=301,L]
-RewriteRule ^playbook/?$                     /free-tools [R=301,L]
-RewriteRule ^team/?$                         /about [R=301,L]
-RewriteRule ^lifecycle/?$                    /guides [R=301,L]
-RewriteRule ^resources/?$                    /guides [R=301,L]
-
-# FPO keyword slugs → the /guides layer (hub until each spoke is migrated)
+RewriteRule ^eos/?$                          /for-eos [R=301,L]
+RewriteRule ^eos/(.*)$                        /for-eos/$1 [R=301,L]
+RewriteRule ^free-tools/hidden-gem/?$         /free-tools/hidden-gem-identifier [R=301,L]
+RewriteRule ^services/?$                      /work-with-us [R=301,L]
+RewriteRule ^get-to-green/?$                  /free-tools/get-to-green [R=301,L]
+RewriteRule ^get-to-green-app/?$              /free-tools/get-to-green [R=301,L]
+RewriteRule ^playbook/?$                      /free-tools [R=301,L]
+RewriteRule ^team/?$                          /about [R=301,L]
+RewriteRule ^lifecycle/?$                     /guides [R=301,L]
+RewriteRule ^resources/?$                     /guides [R=301,L]
 RewriteRule ^(what-is-a-fractional-chro|what-does-a-cpo-do|cost|vs-consultant|vs-peo|7-signs|turnover|culture|due-diligence|onboarding|for-pe|hr-systems)/?$ /guides [R=301,L]
 
 # ---------------------------------------------------------------------------
-# 2. Serve prerendered .html without the extension.
+# 2. Canonicalize: strip a trailing slash when a matching page exists, so
+#    /for-eos/ and /guides/ resolve to the clean /for-eos, /guides (no dup).
 # ---------------------------------------------------------------------------
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{DOCUMENT_ROOT}/$1.html -f
-RewriteRule ^(.+?)/?$ $1.html [L]
+RewriteRule ^(.+?)/$ /$1 [R=301,L]
+
+# ---------------------------------------------------------------------------
+# 3. Serve the prerendered .html extensionless — even when a same-named
+#    directory exists (this is what fixes the hub 404s).
+# ---------------------------------------------------------------------------
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+?)/?$ /$1.html [L]
 
 # Custom 404 (Next emits out/404.html)
 ErrorDocument 404 /404.html
+
+# ---------------------------------------------------------------------------
+# 4. Compression + caching for static assets (safe no-ops if a module is off).
+# ---------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml \
+    application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Next's assets under /_next/static are content-hashed → cache hard.
+  ExpiresByType text/css                 "access plus 1 year"
+  ExpiresByType application/javascript   "access plus 1 year"
+  ExpiresByType font/woff2               "access plus 1 year"
+  ExpiresByType image/jpeg               "access plus 30 days"
+  ExpiresByType image/png                "access plus 30 days"
+  ExpiresByType image/svg+xml            "access plus 30 days"
+  ExpiresByType image/x-icon             "access plus 30 days"
+  # HTML stays fresh so deploys show up immediately.
+  ExpiresByType text/html                "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
