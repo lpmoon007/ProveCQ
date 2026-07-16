@@ -13,11 +13,18 @@ export const metadata: Metadata = {
 };
 
 /**
- * The free-tool funnel ladder (handoff §6). Interactive tool pages are Phase 2;
- * until they ship, every card routes to the universal funnel end — "book a call"
- * (handoff: "Every tool → book a call").
+ * The free-tool funnel ladder (handoff §6). The Hidden Gem Identifier is live
+ * (HubSpot-gated); the remaining interactive tools are Phase 2 and route to the
+ * universal funnel end — "book a call" — until they ship.
  */
-const TOOLS = [
+const TOOLS: {
+  label: string;
+  title: string;
+  body: string;
+  cta: string;
+  dark: boolean;
+  href?: string;
+}[] = [
   {
     label: "2 minutes · instant",
     title: "The Certainty Diagnostic",
@@ -38,6 +45,7 @@ const TOOLS = [
     body: "Find the two people every leader overlooks — the quiet performer who doesn't want the spotlight, and the striver stuck in the wrong seat.",
     cta: "Find your hidden gems",
     dark: false,
+    href: "/free-tools/hidden-gem",
   },
   {
     label: "Interactive · 146 points",
@@ -83,14 +91,14 @@ export default function FreeToolsPage() {
       <Section tone="paper">
         <Container>
           <p className="mx-auto mb-8 max-w-[720px] rounded-[14px] border border-edge-light bg-paper-2 px-5 py-3.5 text-center text-[14px] text-content-muted">
-            The interactive tools are rolling out next. In the meantime,
-            book a call and we&rsquo;ll run any of them with you.
+            The Hidden Gem Identifier is live. The rest are rolling out next — in
+            the meantime, book a call and we&rsquo;ll run any of them with you.
           </p>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {TOOLS.map((t) => (
               <Link
                 key={t.title}
-                href="/contact"
+                href={t.href ?? "/contact"}
                 className={`flex flex-col rounded-[18px] p-7 transition-colors ${
                   t.dark
                     ? "bg-ink text-paper on-dark hover:bg-ink-2"

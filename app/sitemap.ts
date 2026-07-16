@@ -12,6 +12,7 @@ const ROUTES = [
   "/contact",
   "/heatmap",
   "/free-tools",
+  "/free-tools/hidden-gem",
   "/guides",
   "/ethics",
 ];

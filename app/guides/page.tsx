@@ -60,7 +60,7 @@ export default function GuidesPage() {
         <Container>
           {/* Featured banner */}
           <Link
-            href="/free-tools"
+            href="/free-tools/hidden-gem"
             className="mb-8 flex flex-col gap-2 rounded-[18px] bg-ink p-8 text-paper transition-colors on-dark hover:bg-ink-2 sm:flex-row sm:items-center sm:justify-between"
           >
             <div>
@@ -74,7 +74,7 @@ export default function GuidesPage() {
               </p>
             </div>
             <span className="shrink-0 font-bold text-green-soft">
-              All free tools &rarr;
+              Find your hidden gems &rarr;
             </span>
           </Link>
 
