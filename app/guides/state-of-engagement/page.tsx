@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { RelatedGuides } from "@/components/RelatedLinks";
 import { Container, Section, ButtonLink } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
 import { site } from "@/lib/site";
@@ -273,6 +274,7 @@ export default function StateOfEngagementPage() {
         </Container>
       </Section>
 
+      <RelatedGuides current="/guides/state-of-engagement" />
       <Footer />
     </>
   );

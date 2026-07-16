@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { RelatedGuides } from "@/components/RelatedLinks";
 import { Container, Eyebrow, Section, ButtonLink } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
 import { site } from "@/lib/site";
@@ -182,6 +183,7 @@ export default function ItsTheMetricPage() {
         </Container>
       </Section>
 
+      <RelatedGuides current="/guides/its-the-metric" />
       <Footer />
     </>
   );

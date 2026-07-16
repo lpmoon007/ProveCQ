@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { RelatedGuides } from "@/components/RelatedLinks";
 import { Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
 
@@ -118,6 +119,7 @@ export default function DelegateGuidePage() {
         Book a call to see how Prove tells you exactly who is ready to own more.
       </CTASection>
 
+      <RelatedGuides current="/guides/how-to-delegate" />
       <Footer />
     </>
   );

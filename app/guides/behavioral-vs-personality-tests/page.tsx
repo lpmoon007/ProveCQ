@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { RelatedGuides } from "@/components/RelatedLinks";
 import { Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
 
@@ -91,6 +92,7 @@ export default function BehavioralVsPersonalityGuidePage() {
         Book a call to see behavioral proof on your own team.
       </CTASection>
 
+      <RelatedGuides current="/guides/behavioral-vs-personality-tests" />
       <Footer />
     </>
   );

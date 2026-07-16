@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { RelatedGuides } from "@/components/RelatedLinks";
 import { Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
 
@@ -130,6 +131,7 @@ export default function CqVsEngagementSurveysGuidePage() {
         outcomes.
       </CTASection>
 
+      <RelatedGuides current="/guides/cq-vs-engagement-surveys" />
       <Footer />
     </>
   );

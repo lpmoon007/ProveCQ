@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { MoreFreeTools } from "@/components/RelatedLinks";
 import TalentScorecard from "@/components/TalentScorecard";
 
 export const metadata: Metadata = {
@@ -51,6 +52,7 @@ export default function ScorecardPage() {
         </div>
       </section>
 
+      <MoreFreeTools current="/free-tools/scorecard" />
       <Footer />
     </div>
   );

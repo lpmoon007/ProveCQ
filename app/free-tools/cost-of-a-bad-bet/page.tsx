@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { MoreFreeTools } from "@/components/RelatedLinks";
 import CostOfBadBet from "@/components/CostOfBadBet";
 
 export const metadata: Metadata = {
@@ -53,6 +54,7 @@ export default function CostOfABadBetPage() {
         </p>
       </section>
 
+      <MoreFreeTools current="/free-tools/cost-of-a-bad-bet" />
       <Footer />
     </div>
   );

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { MoreFreeTools } from "@/components/RelatedLinks";
 import GetToGreen from "@/components/GetToGreen";
 
 export const metadata: Metadata = {
@@ -77,6 +78,7 @@ export default function GetToGreenPage() {
         </div>
       </section>
 
+      <MoreFreeTools current="/free-tools/get-to-green" />
       <Footer />
     </div>
   );

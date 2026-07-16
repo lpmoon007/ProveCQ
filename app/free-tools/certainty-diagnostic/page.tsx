@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { MoreFreeTools } from "@/components/RelatedLinks";
 import CertaintyDiagnostic from "@/components/CertaintyDiagnostic";
 
 export const metadata: Metadata = {
@@ -41,7 +43,11 @@ export default function CertaintyDiagnosticPage() {
             Ten quick questions. One honest number: your{" "}
             <strong className="text-paper">Certainty Score</strong> &mdash; how
             much proof (versus gut feel) is behind your hiring, promotion, and
-            retention decisions.
+            retention decisions. It&rsquo;s the fastest way to see your{" "}
+            <Link href="/certainty-gap" className="text-green-soft underline">
+              certainty gap
+            </Link>
+            .
           </p>
         </div>
       </section>
@@ -52,6 +58,7 @@ export default function CertaintyDiagnosticPage() {
         </div>
       </section>
 
+      <MoreFreeTools current="/free-tools/certainty-diagnostic" />
       <Footer />
     </div>
   );

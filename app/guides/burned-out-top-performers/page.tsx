@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { RelatedGuides } from "@/components/RelatedLinks";
 import { Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
 
@@ -119,6 +120,7 @@ export default function BurnedOutGuidePage() {
         fairly.
       </CTASection>
 
+      <RelatedGuides current="/guides/burned-out-top-performers" />
       <Footer />
     </>
   );
