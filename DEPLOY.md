@@ -1,179 +1,69 @@
-# Deploying provecq.com to your own server
+# Auto-deploy to the VPS (GitHub Actions → Plesk over SSH)
 
-This repo auto-deploys to a Linux server you control. On every merge to `main`,
-a GitHub Actions workflow (`.github/workflows/deploy.yml`) SSHes into your server,
-pulls the new code, builds it, and reloads the app with **pm2** — zero downtime.
+Same setup as **belegendary.org**: every push to `main` builds the site in
+GitHub's cloud and **rsyncs the finished files** into the Plesk VPS doc-root. The
+server runs no Node — it just serves static files.
 
-You set this up **once**. After that, the flow is:
+The workflow (`.github/workflows/deploy.yml`) is already in the repo. It stays
+**inert** (build-only) until you add the secrets below, so nothing deploys by
+accident. To pause deploys later, delete the `DEPLOY_SSH_KEY` secret.
 
-```
-open PR → review → merge to main → GitHub Actions builds & deploys → live
-```
-
-> Why a Node server (not plain static hosting)? The FPO→Prove 301 redirects and
-> the generated `sitemap.xml` / `robots.txt` run on Next's server. So the app runs
-> `next start` (Node) behind a reverse proxy — not a static file folder.
-
----
-
-## 1. One-time server provisioning
-
-SSH into your server as a sudo user and run these once. (Ubuntu/Debian shown; adapt
-for your distro.)
-
-### a. Install Node 20 + pm2 + git
-
-```bash
-# Node 20 LTS
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo apt-get install -y nodejs git
-
-# pm2 (process manager) + let it start on boot
-sudo npm install -g pm2
-pm2 startup            # prints a command — run the command it prints
-```
-
-> Building Next.js needs ~1 GB RAM. On a small VPS, add swap first:
-> `sudo fallocate -l 2G /swapfile && sudo chmod 600 /swapfile && sudo mkswap /swapfile && sudo swapon /swapfile`
-> (persist it in `/etc/fstab`). Or switch to the "build in CI" variant (see §5).
-
-### b. Give the server read access to the repo
-
-Create a **read-only deploy key** so the server can `git pull`:
-
-```bash
-ssh-keygen -t ed25519 -C "provecq-deploy" -f ~/.ssh/provecq_deploy -N ""
-cat ~/.ssh/provecq_deploy.pub
-```
-
-Add that **public** key in GitHub → repo **Settings → Deploy keys → Add deploy key**
-(read-only is fine). Then tell git to use it:
-
-```bash
-cat >> ~/.ssh/config <<'EOF'
-Host github-provecq
-  HostName github.com
-  User git
-  IdentityFile ~/.ssh/provecq_deploy
-EOF
-```
-
-### c. Clone and do the first build
-
-```bash
-cd /var/www          # or wherever you keep sites
-git clone git@github-provecq:lpmoon007/ProveCQ.git provecq
-cd provecq
-npm ci
-npm run build
-pm2 start ecosystem.config.js   # starts the app on port 3000
-pm2 save
-```
-
-Visit `http://YOUR_SERVER_IP:3000` — you should see the site.
-
-### d. Put nginx in front (domain + HTTPS)
-
-```bash
-sudo apt-get install -y nginx
-sudo tee /etc/nginx/sites-available/provecq <<'EOF'
-server {
-  server_name provecq.com www.provecq.com;
-  location / {
-    proxy_pass http://127.0.0.1:3000;
-    proxy_http_version 1.1;
-    proxy_set_header Host $host;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header X-Forwarded-Proto $scheme;
-    proxy_set_header Upgrade $http_upgrade;
-    proxy_set_header Connection "upgrade";
-  }
-}
-EOF
-sudo ln -s /etc/nginx/sites-available/provecq /etc/nginx/sites-enabled/
-sudo nginx -t && sudo systemctl reload nginx
-
-# Free TLS cert + auto-renew
-sudo apt-get install -y certbot python3-certbot-nginx
-sudo certbot --nginx -d provecq.com -d www.provecq.com
-```
-
-Point your domain's DNS **A record** at the server's IP first, so certbot can verify.
+> **How it differs from a "next start" server:** this app is exported to static
+> HTML (`output: "export"` in `next.config.mjs` → `./out`). That's why it fits the
+> same rsync model as the Astro site. The FPO → Prove 301 redirects therefore live
+> in **`public/.htaccess`** (Apache/Plesk reads it from the doc-root), not in
+> `next.config`. Interactive tools and the HubSpot form are client-side JS, so they
+> work fine on a static host.
 
 ---
 
-## 2. GitHub secrets for the auto-deploy
+## Good news: reuse your Be Legendary key
 
-The workflow needs to SSH in as a user that can pull + build + reload pm2. Create a
-key **for GitHub** (separate from the repo deploy key above):
+This is the **same server and same deploy user** you already use for
+belegendary.org. So you do **not** need the `gha_key` you just generated — you can
+reuse the values that already work. Four of the five secrets are identical; only
+the path changes.
 
-```bash
-# On your local machine or the server:
-ssh-keygen -t ed25519 -C "github-actions" -f gha_key -N ""
-# add the PUBLIC key to the server's ~/.ssh/authorized_keys for the deploy user
-```
+### 1. Create the provecq site in Plesk (one time)
 
-These go in a protected **`production` environment**, not as plain repository
-secrets — the deploy job declares `environment: production`, which lets you gate
-deploys behind a reviewer and lock them to `main`.
+In Plesk, add the domain (or subdomain) **provecq.com** so it gets its own
+doc-root, e.g. `/var/www/vhosts/provecq.com/httpdocs`. Point the domain's DNS at
+the VPS and issue an SSL cert (Plesk → Let's Encrypt). Note the exact `httpdocs`
+path — that's your `DEPLOY_PATH`.
 
-1. GitHub → repo **Settings → Environments → New environment** → name it
-   **`production`** (must match the workflow exactly).
-2. (Recommended) Under that environment, set **Deployment protection rules**:
-   - **Required reviewers** → yourself, so a human approves each production deploy.
-   - **Deployment branches** → *Selected branches* → `main`, so only `main` can
-     deploy.
-3. Under the same environment, **Environment secrets → Add secret**, add:
+### 2. Add the secrets to THIS repo
 
-| Secret        | Value                                                        |
-| ------------- | ------------------------------------------------------------ |
-| `SSH_HOST`    | server IP or hostname (e.g. `203.0.113.10`)                  |
-| `SSH_USER`    | the deploy user (e.g. `deploy` or `ubuntu`)                  |
-| `SSH_KEY`     | the **private** key contents (`gha_key`, full text)          |
-| `SSH_PORT`    | SSH port (optional; defaults to `22`)                        |
-| `DEPLOY_PATH` | absolute path to the clone (e.g. `/var/www/provecq`)         |
+Secrets don't carry across repos, so add them to `ProveCQ` too:
+Repo → **Settings → Secrets and variables → Actions → New repository secret**.
 
-That's it. The next merge to `main` deploys automatically (pausing for your
-approval if you enabled required reviewers). You can also trigger a deploy by hand:
-**Actions → Deploy to server → Run workflow**.
+| Secret           | Value                                                                 |
+| ---------------- | --------------------------------------------------------------------- |
+| `DEPLOY_SSH_KEY` | **Same** private key as Be Legendary (paste its `DEPLOY_SSH_KEY` value) |
+| `DEPLOY_HOST`    | **Same** as Be Legendary (e.g. `belegendary.org` or the server IP)      |
+| `DEPLOY_USER`    | **Same** as Be Legendary (e.g. `belegen_ftp`)                           |
+| `DEPLOY_PORT`    | **Same** as Be Legendary (usually `22`)                                 |
+| `DEPLOY_PATH`    | **NEW** — the provecq doc-root, e.g. `/var/www/vhosts/provecq.com/httpdocs` |
 
-> Prefer no environment gating? You can instead add these as **repository secrets**
-> (Settings → Secrets and variables → Actions) and delete the `environment:
-> production` line from the workflow — but you lose the reviewer/branch protection.
-> Repo secrets of the same name also act as a fallback if the environment doesn't
-> define them.
+> The existing `DEPLOY_SSH_KEY` already authenticates to this box, so no
+> `ssh-copy-id` or new key is needed. (You can delete the `gha_key` /
+> `gha_key.pub` files you generated earlier.)
 
-> The workflow only becomes active once `.github/workflows/deploy.yml` exists on
-> your **default branch**. This branch (`claude/new-session-pja77r`) carries it —
-> merging the PR into `main` activates it. If your default branch isn't `main`,
-> change the `branches:` line in the workflow.
+### 3. Test
+
+Push to `main`, or run it by hand: repo → **Actions → Deploy to VPS → Run
+workflow**. Watch it build and rsync, then load provecq.com.
 
 ---
 
-## 3. Environment variables (later phases)
+## Notes
 
-When auth/DB/Stripe/HubSpot land, put their keys in a gitignored `.env.production`
-on the server (in `DEPLOY_PATH`). `next build` / `next start` pick it up
-automatically; pm2 already runs with `NODE_ENV=production`. Never commit real keys.
-
----
-
-## 4. Rolling back
-
-```bash
-cd /var/www/provecq
-git reset --hard <previous-good-commit-sha>
-npm ci && npm run build
-pm2 reload ecosystem.config.js
-```
-
----
-
-## 5. Alternative: build in CI instead of on the server
-
-If your VPS is too small to build (low RAM), flip the workflow to build the app on
-GitHub's runner and copy the artifact over (`.next`, `public`, `package*.json`,
-`next.config.mjs`, `ecosystem.config.js`) via `rsync`, then run
-`npm ci --omit=dev && pm2 reload` on the server. Ask and I'll swap the workflow to
-that shape.
+- `rsync --delete` keeps the server exactly matching the build, but **never**
+  touches `.well-known` (used for your SSL certificate) — same guard as
+  Be Legendary.
+- The build runs on GitHub's runners (Node 22); the VPS needs no Node.
+- **Redirects** are in `public/.htaccess`. Edit that file (not `next.config`) to
+  change the FPO → Prove 301 map; it ships in every build.
+- **Later phases:** when auth, database, Stripe billing, or server-side HubSpot
+  form posting land (handoff phases 3–5), a static host can't run them. At that
+  point you'd move to a Node runtime — Plesk's Node.js/Passenger extension, or a
+  platform like Vercel. Nothing to change now.

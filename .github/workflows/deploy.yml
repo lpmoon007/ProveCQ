@@ -1,44 +1,53 @@
-name: Deploy to server
+name: Deploy to VPS
 
-# Runs on every merge/push to the production branch (i.e. after a PR is merged),
-# and can be triggered by hand from the Actions tab.
+# Builds the static export and rsyncs it into the Plesk VPS doc-root over SSH,
+# on every push to main. Same pattern as the belegendary.org deploy.
+# Inert (build-only) until the DEPLOY_* repository secrets are set — so nothing
+# deploys by accident. See DEPLOY.md.
+
 on:
   push:
     branches: [main]
-  workflow_dispatch:
+  workflow_dispatch: {}
 
-# Never let two deploys run at once; let an in-flight deploy finish.
 concurrency:
-  group: production-deploy
-  cancel-in-progress: false
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    # Scopes the SSH secrets to a protected "production" environment, so you can
-    # require a reviewer and restrict which branch may deploy (see DEPLOY.md §2).
-    environment: production
     steps:
-      - name: Deploy over SSH
-        uses: appleboy/ssh-action@v1.0.3
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}
-          port: ${{ secrets.SSH_PORT || 22 }}
-          # Build on the server so the server's own .env / secrets are used.
-          # Requires: git, Node 20+, npm, and pm2 already installed (see DEPLOY.md).
-          script: |
-            set -euo pipefail
-            cd "${{ secrets.DEPLOY_PATH }}"
-            echo "→ Fetching latest main"
-            git fetch --all --prune
-            git reset --hard origin/main
-            echo "→ Installing dependencies"
-            npm ci
-            echo "→ Building"
-            npm run build
-            echo "→ Reloading app (zero-downtime)"
-            pm2 startOrReload ecosystem.config.js --update-env
-            pm2 save
-            echo "✓ Deploy complete"
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build # next build with output:"export" → ./out
+
+      - name: Deploy out/ to the VPS (rsync over SSH)
+        env:
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+        run: |
+          if [ -z "$DEPLOY_SSH_KEY" ]; then
+            echo "::warning::DEPLOY_SSH_KEY not set — skipping deploy (build still validated)."
+            exit 0
+          fi
+          PORT="${DEPLOY_PORT:-22}"
+          mkdir -p ~/.ssh
+          printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p "$PORT" "$DEPLOY_HOST" >> ~/.ssh/known_hosts 2>/dev/null
+          # --delete keeps the server matching the build; never touch .well-known
+          # (SSL/ACME). Trailing slash on out/ copies contents, not the folder.
+          rsync -avz --delete --exclude='.well-known' \
+            -e "ssh -i ~/.ssh/deploy_key -p $PORT -o StrictHostKeyChecking=accept-new" \
+            out/ "$DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH/"
+          echo "Deployed to $DEPLOY_HOST:$DEPLOY_PATH"
