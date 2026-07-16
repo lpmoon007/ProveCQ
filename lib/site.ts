@@ -58,6 +58,7 @@ export const footerCols = [
     title: "Start",
     links: [
       { label: "Book a call", href: site.bookingUrl },
+      { label: "Contact", href: "/contact" },
       { label: "Be Legendary ↗", href: site.parentUrl },
     ],
   },

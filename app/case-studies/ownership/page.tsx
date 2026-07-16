@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { MoreCaseStudies } from "@/components/RelatedLinks";
 import { Container, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
 
@@ -207,6 +208,7 @@ export default function CaseStudyOwnershipPage() {
         </Container>
       </Section>
 
+      <MoreCaseStudies current="/case-studies/ownership" />
       <Footer />
     </>
   );

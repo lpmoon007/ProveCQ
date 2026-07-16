@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { RelatedGuides } from "@/components/RelatedLinks";
 import { ButtonLink, Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
 import { site } from "@/lib/site";
@@ -137,6 +138,7 @@ export default function SuccessionPlanningPage() {
         </div>
       </section>
 
+      <RelatedGuides current="/guides/succession-planning" />
       <Footer />
     </>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { MoreFreeTools } from "@/components/RelatedLinks";
 import FourAMTest from "@/components/FourAMTest";
 import { PageHero } from "@/components/PageParts";
 import { site } from "@/lib/site";
@@ -128,6 +129,7 @@ export default function FourAMTestPage() {
         </div>
       </section>
 
+      <MoreFreeTools current="/free-tools/4am-test" />
       <Footer />
     </div>
   );

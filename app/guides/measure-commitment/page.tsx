@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { RelatedGuides } from "@/components/RelatedLinks";
 import { Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
 
@@ -112,6 +113,7 @@ export default function MeasureCommitmentGuidePage() {
         Book a call to see the Commitment Quotient measured on a real team.
       </CTASection>
 
+      <RelatedGuides current="/guides/measure-commitment" />
       <Footer />
     </>
   );

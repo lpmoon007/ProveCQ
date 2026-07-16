@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { MoreFreeTools } from "@/components/RelatedLinks";
 import { ButtonLink, Container, Eyebrow, Section } from "@/components/ui";
 import HiddenGemForm from "@/components/HiddenGemForm";
 import { site } from "@/lib/site";
@@ -117,6 +118,7 @@ export default function HiddenGemPage() {
         </Container>
       </Section>
 
+      <MoreFreeTools current="/free-tools/hidden-gem-identifier" />
       <Footer />
     </>
   );
