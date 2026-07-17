@@ -19,6 +19,7 @@ const ROUTES = [
   "/faq",
   "/glossary",
   "/author/james-carter",
+  "/privacy",
   // Free tools
   "/free-tools",
   "/free-tools/certainty-diagnostic",

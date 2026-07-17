@@ -17,7 +17,12 @@ export default function StickyCTA() {
 
   useEffect(() => {
     if (localStorage.getItem(DISMISS_KEY) === "1") return;
-    setReady(true);
+    // Hold until the cookie-consent choice is made, so the two bottom bars
+    // never stack on top of each other.
+    const consentResolved = () => !!localStorage.getItem("provecq_consent");
+    if (consentResolved()) setReady(true);
+    const onResolved = () => setReady(true);
+    window.addEventListener("provecq-consent-resolved", onResolved);
     const onScroll = () => {
       const el = document.documentElement;
       const frac =
@@ -28,7 +33,10 @@ export default function StickyCTA() {
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("provecq-consent-resolved", onResolved);
+    };
   }, []);
 
   if (!ready || !show) return null;
