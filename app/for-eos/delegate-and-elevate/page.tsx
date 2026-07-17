@@ -6,6 +6,7 @@ import { RelatedEOS } from "@/components/RelatedLinks";
 import { ButtonLink, Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
 import { ArticleMeta } from "@/components/ArticleMeta";
+import DelegateElevateDiagram from "@/components/DelegateElevateDiagram";
 import { site } from "@/lib/site";
 
 const CANONICAL = "/for-eos/delegate-and-elevate";
@@ -179,6 +180,9 @@ export default function EosDelegateAndElevatePage() {
             <h2 className="mb-6 font-display text-[28px] font-bold tracking-[-.02em] sm:text-[32px]">
               The four quadrants
             </h2>
+            <div className="mb-6 rounded-[18px] border border-edge-light bg-paper-2 p-5 sm:p-7">
+              <DelegateElevateDiagram className="max-w-[760px] mx-auto" />
+            </div>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {QUADRANTS.map((c) => (
                 <div

@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
 import CQDiagram from "@/components/CQDiagram";
+import SprintTimeline from "@/components/SprintTimeline";
 
 export const metadata: Metadata = {
   title: "How Prove Works — Behavioral Proof in Six Weeks",
@@ -87,6 +88,9 @@ export default function HowItWorksPage() {
       {/* Three stages */}
       <Section tone="paper">
         <Container>
+          <div className="mb-10 rounded-[18px] border border-edge-light bg-paper-2 px-5 py-7 sm:px-8">
+            <SprintTimeline className="mx-auto max-w-[820px]" />
+          </div>
           <div className="grid grid-cols-1 gap-[18px] md:grid-cols-3">
             {STAGES.map((s) => (
               <div
