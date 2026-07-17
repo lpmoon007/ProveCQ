@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Space_Grotesk, Figtree } from "next/font/google";
 import Analytics from "@/components/Analytics";
 import StickyCTA from "@/components/StickyCTA";
+import ConsentBanner from "@/components/ConsentBanner";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -90,12 +91,20 @@ export default function RootLayout({
         <Script id="gtag-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: 'denied',
+  wait_for_update: 500
+});
 gtag('js', new Date());
 gtag('config', '${site.gaMeasurementId}');`}
         </Script>
         <Analytics />
         {children}
         <StickyCTA />
+        <ConsentBanner />
       </body>
     </html>
   );
