@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Space_Grotesk, Figtree } from "next/font/google";
+import Analytics from "@/components/Analytics";
+import StickyCTA from "@/components/StickyCTA";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -91,7 +93,9 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', '${site.gaMeasurementId}');`}
         </Script>
+        <Analytics />
         {children}
+        <StickyCTA />
       </body>
     </html>
   );

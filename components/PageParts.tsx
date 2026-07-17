@@ -36,17 +36,27 @@ export function PageHero({
   );
 }
 
-/** Green closing CTA band with a heading, blurb, and Book-a-call button. */
+/**
+ * Green closing CTA band — a two-rung conversion ladder: the high-commitment
+ * ask (book a call) plus a low-commitment path (free diagnostic), with a
+ * risk-reversal microline. Pass `secondary={null}` to show only the primary.
+ */
 export function CTASection({
   title,
   children,
   cta = "Book a call",
   href = site.bookingUrl,
+  secondaryCta = "Or take the free 2-minute diagnostic",
+  secondaryHref = "/free-tools/certainty-diagnostic",
+  note = "20-minute call · no prep, no pitch, no obligation",
 }: {
   title: string;
   children: ReactNode;
   cta?: string;
   href?: string;
+  secondaryCta?: string | null;
+  secondaryHref?: string;
+  note?: string | null;
 }) {
   return (
     <section className="bg-green px-5 py-16 text-center text-white sm:px-8 md:py-20 on-dark">
@@ -57,9 +67,24 @@ export function CTASection({
         <p className="m-0 mb-8 text-[18px] leading-[1.6] text-[#E4F5EB]">
           {children}
         </p>
-        <ButtonLink href={href} variant="dark" className="text-[17px]">
-          {cta}
-        </ButtonLink>
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+          <ButtonLink href={href} variant="dark" className="text-[17px]">
+            {cta}
+          </ButtonLink>
+          {secondaryCta && (
+            <Link
+              href={secondaryHref}
+              className="text-[15px] font-bold text-white underline decoration-white/40 underline-offset-4 transition-colors hover:decoration-white"
+            >
+              {secondaryCta} &rarr;
+            </Link>
+          )}
+        </div>
+        {note && (
+          <p className="m-0 mt-6 text-[13.5px] font-medium text-[#CDEBD9]">
+            {note}
+          </p>
+        )}
       </div>
     </section>
   );
