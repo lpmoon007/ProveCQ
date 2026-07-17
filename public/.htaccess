@@ -14,6 +14,9 @@ RewriteEngine On
 # ---------------------------------------------------------------------------
 RewriteRule ^eos/?$                          /for-eos [R=301,L]
 RewriteRule ^eos/(.*)$                        /for-eos/$1 [R=301,L]
+# The EOS people-issues article lives under /guides; catch the intuitive
+# /for-eos/ path so it resolves instead of 404ing.
+RewriteRule ^for-eos/eos-people-issues/?$    /guides/eos-people-issues [R=301,L]
 RewriteRule ^free-tools/hidden-gem/?$         /free-tools/hidden-gem-identifier [R=301,L]
 RewriteRule ^services/?$                      /work-with-us [R=301,L]
 RewriteRule ^get-to-green/?$                  /free-tools/get-to-green [R=301,L]
