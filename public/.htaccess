@@ -41,6 +41,12 @@ RewriteRule ^(.+?)/$ /$1 [R=301,L]
 RewriteCond %{DOCUMENT_ROOT}/$1.html -f
 RewriteRule ^(.+?)/?$ /$1.html [L]
 
+# The generated OG image is an extensionless file — force its content type
+# so social/link-preview crawlers accept it as an image.
+<Files "opengraph-image">
+  ForceType image/png
+</Files>
+
 # Custom 404 (Next emits out/404.html)
 ErrorDocument 404 /404.html
 
