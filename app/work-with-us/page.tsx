@@ -41,9 +41,60 @@ const OFFERS = [
   },
 ];
 
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Prove",
+  serviceType: "Behavioral assessment for people decisions",
+  provider: { "@type": "Organization", name: "Be Legendary", url: site.parentUrl },
+  areaServed: "US",
+  description:
+    "Behavioral proof of who will deliver — before you promote, hire, or hand over the keys. Powered by the Commitment Quotient.",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Ways to work with Prove",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        name: "Prove Sprint",
+        price: "10000",
+        priceCurrency: "USD",
+        description:
+          "A done-with-you, six-week behavioral sprint for your next big people decision — a Commitment Map, the Heatmap, and a leader debrief.",
+        url: `${site.domain}/work-with-us`,
+      },
+      {
+        "@type": "Offer",
+        name: "Better Every Day",
+        priceCurrency: "USD",
+        priceSpecification: {
+          "@type": "UnitPriceSpecification",
+          price: "500",
+          priceCurrency: "USD",
+          unitText: "MONTH",
+        },
+        description:
+          "Ongoing development for your proven players: weekly tracking, monthly commitments, and drift alerts. $500/mo base + $150/active seat.",
+        url: `${site.domain}/better-every-day`,
+      },
+      {
+        "@type": "Offer",
+        name: "Prove for EOS Implementers",
+        description:
+          "A capacity-measurement tool that plugs into the People Analyzer and Quarterly Conversations — a complement to your EOS practice.",
+        url: `${site.domain}/for-eos`,
+      },
+    ],
+  },
+};
+
 export default function WorkWithUsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
       <Nav />
       <PageHero
         crumb="Work with us"

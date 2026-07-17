@@ -11,9 +11,41 @@ export const metadata: Metadata = {
     "Get to Green scores all 7 macro and 30+ micro people systems red, yellow, or green — a category-weighted readiness map that shows exactly where your company is exposed as you scale, and what to fix first.",
 };
 
+const howToJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to map your company's people-systems readiness",
+  description:
+    "Get to Green scores all 7 macro and 30+ micro people systems red, yellow, or green into one category-weighted readiness score, so you know where you're exposed and what to fix first.",
+  step: [
+    {
+      "@type": "HowToStep",
+      position: 1,
+      name: "Rate each people system",
+      text: "Score all 7 macro and 30+ micro people systems red, yellow, or green based on where your company stands today.",
+    },
+    {
+      "@type": "HowToStep",
+      position: 2,
+      name: "See your weighted readiness score",
+      text: "The map category-weights every status into a single readiness score that reflects real risk as you scale.",
+    },
+    {
+      "@type": "HowToStep",
+      position: 3,
+      name: "Fix the reds first",
+      text: "Work the highest-weighted red and yellow systems in priority order to get to green.",
+    },
+  ],
+};
+
 export default function GetToGreenPage() {
   return (
     <div className="min-h-screen bg-ink text-paper on-dark">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
+      />
       <Nav minimal />
 
       <section className="mx-auto max-w-[1120px] px-5 pb-[18px] pt-12 sm:px-8">

@@ -26,9 +26,48 @@ export const metadata: Metadata = {
   },
 };
 
+const howToJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to measure how much you're guessing about your people",
+  description:
+    "A free 2-minute diagnostic that scores how much of your hiring, promotion, and retention decisions rest on proof versus gut feel.",
+  totalTime: "PT2M",
+  step: [
+    {
+      "@type": "HowToStep",
+      position: 1,
+      name: "Answer ten questions",
+      text: "Rate your confidence across hiring, promotion, retention, and potential decisions.",
+    },
+    {
+      "@type": "HowToStep",
+      position: 2,
+      name: "Get your Certainty Score",
+      text: "See a single 0–100 score showing how much of your people decisions rest on proof versus gut feel.",
+    },
+    {
+      "@type": "HowToStep",
+      position: 3,
+      name: "See where you're most exposed",
+      text: "Review your three lowest-certainty areas — the decisions where you're guessing most.",
+    },
+    {
+      "@type": "HowToStep",
+      position: 4,
+      name: "Get the fix",
+      text: "Book a call to review it, or open the full 146-point Get to Green map to turn your reds green.",
+    },
+  ],
+};
+
 export default function CertaintyDiagnosticPage() {
   return (
     <div className="min-h-screen bg-paper text-content">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
+      />
       <Nav />
 
       <section className="bg-ink px-5 pb-10 pt-[70px] text-paper on-dark sm:px-8">
