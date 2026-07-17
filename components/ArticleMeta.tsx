@@ -61,7 +61,7 @@ export function ArticleMeta({
           <span>
             By{" "}
             <Link
-              href={AUTHOR.url}
+              href={AUTHOR.path}
               className="font-semibold text-content hover:text-green"
             >
               {AUTHOR.name}

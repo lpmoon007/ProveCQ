@@ -62,6 +62,9 @@ const ROUTES = [
   "/guides/its-the-metric",
   "/guides/state-of-engagement",
   "/guides/eos-people-issues",
+  "/guides/vs-9-box",
+  "/guides/vs-performance-reviews",
+  "/guides/vs-resumes-interviews",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

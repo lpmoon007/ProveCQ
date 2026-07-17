@@ -24,6 +24,9 @@ export const GUIDE_ARTICLES: GuideRef[] = [
   { href: "/guides/its-the-metric", title: "The problem isn't your people. It's the metric." },
   { href: "/guides/state-of-engagement", title: "The 2026 State of Engagement" },
   { href: "/guides/eos-people-issues", title: "Solving people issues in your Level 10 / IDS" },
+  { href: "/guides/vs-9-box", title: "Prove vs. the 9-box grid" },
+  { href: "/guides/vs-performance-reviews", title: "Prove vs. annual performance reviews" },
+  { href: "/guides/vs-resumes-interviews", title: "Why resumes and interviews miss follow-through" },
 ];
 
 /** EOS spoke pages under /for-eos — used by the More on EOS + Prove cross-links. */
