@@ -44,9 +44,57 @@ const AHEAD = [
   },
 ];
 
+// A build sequence — how to actually stand up a bench before the crunch.
+const BUILD = [
+  "Map the leadership roles you will need in the next 12 to 24 months, not just the ones open today.",
+  "Look across the whole team for leadership behavior — initiative, applied grit, and learnability — including the quiet people who never campaign.",
+  "Separate proven capacity from strong current performance; your best individual contributor is not automatically your next leader.",
+  "Give likely candidates real stretch — a project they can own, a decision they have to make — and watch how they handle ambiguity.",
+  "Pair the stretch with honest coaching and feedback, so people grow into the gap instead of being thrown at it.",
+  "Revisit the bench every quarter, because capacity changes and today's overlooked striver may be next year's obvious pick.",
+];
+
+// FAQ — the format AI answer engines extract and cite.
+const FAQ = [
+  {
+    q: "What is a leadership bench?",
+    a: "A leadership bench is the group of people in your organization who are ready, or nearly ready, to step into leadership roles as they open. A deep bench means growth, departures, and new teams do not force you to promote whoever happens to be available. It is built deliberately, by proving and developing high-capacity people before the need is urgent.",
+  },
+  {
+    q: "How do you build a leadership bench?",
+    a: "Start by mapping the leadership roles you will need over the next year or two, then look across your whole team for the behaviors that predict leadership — initiative beyond the role, follow-through on hard problems, and fast learning. Give the strongest candidates real stretch paired with honest coaching, and revisit the bench regularly. The core move is building capacity ahead of the need rather than filling gaps in a panic.",
+  },
+  {
+    q: "Why do most companies lack a leadership bench?",
+    a: "Because benches do not build themselves. When a gap opens, urgency beats readiness and you promote whoever is available rather than who is ready. High-capacity people stay invisible without a signal to surface them, and by the time you need a leader there is no runway left to grow one. Building a bench requires acting before the need feels urgent, which is exactly when it is easiest to deprioritize.",
+  },
+  {
+    q: "What is the difference between a leadership bench and succession planning?",
+    a: "Succession planning usually names specific successors for specific senior roles. A leadership bench is broader — a pool of proven, developing people who can grow into a range of roles as the organization changes. A strong bench is what makes succession planning realistic, because you are choosing successors from people whose capacity you have already seen.",
+  },
+  {
+    q: "How do you identify future leaders early?",
+    a: "Look at behavior over time rather than a single result or a strong personality. The most predictive signals are initiative (acting before it is their job), applied grit (staying with hard work until it is cracked), and learnability (leveling up when demands change). A Prove cycle scores these from several weeks of real work, so you can see leadership capacity before a role is on the line.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export default function LeadershipBenchPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <Nav />
       <PageHero
         crumb="Guides › Leadership bench"
@@ -78,6 +126,50 @@ export default function LeadershipBenchPage() {
               now, then developing them deliberately ahead of the need. When you
               can see initiative, applied grit, and learnability across your team,
               you know exactly who to grow &mdash; before the seat opens.
+            </p>
+          </div>
+        </Container>
+      </Section>
+
+      <Section tone="paper">
+        <Container>
+          <div className="mx-auto max-w-[760px]">
+            <h2 className="mb-4 font-display text-[28px] font-bold tracking-[-.02em] sm:text-[34px]">
+              What a leadership bench actually is
+            </h2>
+            <p className="m-0 mb-4 text-[17px] leading-[1.65] text-content-muted">
+              A leadership bench is the group of people in your organization who
+              are ready, or nearly ready, to step into leadership roles as they
+              open. The point of a bench is optionality: when someone leaves, a new
+              team forms, or growth outpaces your org chart, you promote from a pool
+              of people whose capacity you have already seen &mdash; instead of
+              promoting whoever happens to be standing closest to the gap. A deep
+              bench is the difference between scaling on purpose and scaling in a
+              scramble.
+            </p>
+            <p className="m-0 mb-4 text-[17px] leading-[1.65] text-content-muted">
+              The reason so few teams have one is that benches do not build
+              themselves. When a role opens, urgency beats readiness &mdash; you
+              fill the seat with whoever is available, not whoever is ready.
+              High-capacity people stay invisible without a signal to surface them,
+              so louder or more tenured names win by default. And by the time the
+              need is undeniable, there is no runway left to develop anyone. Every
+              one of those failures happens because the work of building was
+              deferred to a moment when it was already too late.
+            </p>
+            <p className="m-0 text-[17px] leading-[1.65] text-content-muted">
+              Building ahead of the need means doing two things early: proving who
+              has leadership-grade behavior now, and developing those people
+              deliberately before a role is on the line. Leadership capacity shows
+              up in behavior &mdash; initiative beyond the current role, grit on
+              hard problems, and the learnability to grow into ambiguity &mdash; not
+              in tenure or presentation. Once you can see that pattern across the
+              team, you know exactly who to grow. A strong bench is also what makes{" "}
+              <Link href="/guides/succession-planning" className="font-semibold text-green underline-offset-2 hover:underline">
+                succession planning
+              </Link>{" "}
+              realistic, because you are choosing successors from proven capacity
+              rather than hope.
             </p>
           </div>
         </Container>
@@ -124,6 +216,58 @@ export default function LeadershipBenchPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </Container>
+      </Section>
+
+      <Section tone="paper">
+        <Container>
+          <div className="mx-auto max-w-[760px]">
+            <h2 className="mb-4 font-display text-[28px] font-bold tracking-[-.02em] sm:text-[34px]">
+              How to build the bench, step by step
+            </h2>
+            <p className="m-0 mb-6 text-[17px] leading-[1.65] text-content-muted">
+              Turn &ldquo;we should develop more leaders&rdquo; into a repeatable
+              practice. Run these six steps ahead of the need, not after it:
+            </p>
+            <ol className="m-0 flex list-none flex-col gap-3 p-0">
+              {BUILD.map((b, i) => (
+                <li
+                  key={b}
+                  className="flex gap-3 rounded-[14px] border border-edge-light bg-white px-5 py-3.5 text-[15.5px] leading-[1.5] text-content"
+                >
+                  <span className="mt-0.5 shrink-0 font-display font-bold text-green">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  {b}
+                </li>
+              ))}
+            </ol>
+          </div>
+        </Container>
+      </Section>
+
+      <Section tone="paper2">
+        <Container>
+          <div className="mx-auto max-w-[760px]">
+            <h2 className="mb-6 font-display text-[28px] font-bold tracking-[-.02em] sm:text-[34px]">
+              Leadership bench: FAQ
+            </h2>
+            <div className="flex flex-col gap-3">
+              {FAQ.map((f) => (
+                <details
+                  key={f.q}
+                  className="group rounded-[14px] border border-edge-light bg-white px-6 py-4"
+                >
+                  <summary className="cursor-pointer list-none text-[17px] font-bold marker:content-none">
+                    {f.q}
+                  </summary>
+                  <p className="m-0 mt-3 text-[15.5px] leading-[1.6] text-content-muted">
+                    {f.a}
+                  </p>
+                </details>
+              ))}
+            </div>
           </div>
         </Container>
       </Section>
