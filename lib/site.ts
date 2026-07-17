@@ -13,6 +13,8 @@ export const site = {
   bookingUrl: "https://meetings-na2.hubspot.com/jcarter28",
   parentUrl: "https://www.belegendary.org",
   telephone: "+1-800-513-8759",
+  // Google Analytics 4 (gtag.js) measurement ID.
+  gaMeasurementId: "G-1PRV1QWGHF",
 } as const;
 
 /** Primary nav (dark header). */
