@@ -92,6 +92,44 @@ export default function FreeToolsPage() {
         </Container>
       </section>
 
+      <Section tone="paper" className="!pb-0">
+        <Container className="max-w-[760px]">
+          <p className="m-0 text-[17px] leading-[1.75] text-content-muted">
+            Not sure where to start? For a fast read on your whole approach, take
+            the{" "}
+            <Link
+              href="/free-tools/certainty-diagnostic"
+              className="font-semibold text-green"
+            >
+              2-minute Certainty Diagnostic
+            </Link>
+            . Lying awake about one person you just handed a big responsibility?
+            Run the{" "}
+            <Link
+              href="/free-tools/4am-test"
+              className="font-semibold text-green"
+            >
+              4&nbsp;AM Test
+            </Link>
+            . To surface the people you&rsquo;re overlooking, use the{" "}
+            <Link
+              href="/free-tools/hidden-gem-identifier"
+              className="font-semibold text-green"
+            >
+              Hidden Gem Identifier
+            </Link>
+            . And to size the downside of getting it wrong, the{" "}
+            <Link
+              href="/free-tools/cost-of-a-bad-bet"
+              className="font-semibold text-green"
+            >
+              Cost of a Bad Bet
+            </Link>{" "}
+            calculator puts a real number on one wrong hire or promotion.
+          </p>
+        </Container>
+      </Section>
+
       <Section tone="paper">
         <Container>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">

@@ -60,6 +60,38 @@ export default function GuidesPage() {
         and how to make every one of them on proof instead of a gut feel.
       </PageHero>
 
+      <Section tone="paper" className="!pb-0">
+        <Container className="max-w-[820px]">
+          <p className="m-0 text-[17px] leading-[1.75] text-content-muted">
+            Start with the decision in front of you. For promotions, see{" "}
+            <Link href="/guides/who-to-promote" className="font-semibold text-green">
+              how to know who to promote
+            </Link>{" "}
+            and{" "}
+            <Link href="/guides/failed-promotion" className="font-semibold text-green">
+              why good people fail after one
+            </Link>
+            . For hiring, read{" "}
+            <Link href="/guides/hire-for-follow-through" className="font-semibold text-green">
+              hiring for follow-through
+            </Link>{" "}
+            and the{" "}
+            <Link href="/guides/cost-of-a-bad-hire" className="font-semibold text-green">
+              real cost of a bad hire
+            </Link>
+            . Running on EOS? Make the{" "}
+            <Link href="/for-eos/gwc" className="font-semibold text-green">
+              GWC Capacity box measurable
+            </Link>
+            . Weighing your options? Compare{" "}
+            <Link href="/guides/vs-9-box" className="font-semibold text-green">
+              Prove vs. the 9-box grid
+            </Link>
+            .
+          </p>
+        </Container>
+      </Section>
+
       <Section tone="paper">
         <Container>
           {/* Featured banner */}

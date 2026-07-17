@@ -9,7 +9,7 @@ import { ArticleMeta } from "@/components/ArticleMeta";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "The Real Cost of a Bad Hire (and How to Avoid It)",
+  title: "The Real Cost of a Bad Hire: 40–200% of Salary",
   description:
     "A bad hire costs far more than a salary — 40% to 200% of it, plus momentum and morale. Learn the true cost of a bad hire and how behavioral proof reduces the risk.",
   alternates: { canonical: "/guides/cost-of-a-bad-hire" },
