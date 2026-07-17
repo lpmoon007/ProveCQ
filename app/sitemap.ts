@@ -66,6 +66,10 @@ const ROUTES = [
   "/guides/vs-9-box",
   "/guides/vs-performance-reviews",
   "/guides/vs-resumes-interviews",
+  "/guides/cost-of-turnover",
+  "/guides/regretted-attrition",
+  "/guides/reduce-turnover-small-business",
+  "/guides/retain-top-performers",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

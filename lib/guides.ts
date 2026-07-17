@@ -27,6 +27,10 @@ export const GUIDE_ARTICLES: GuideRef[] = [
   { href: "/guides/vs-9-box", title: "Prove vs. the 9-box grid" },
   { href: "/guides/vs-performance-reviews", title: "Prove vs. annual performance reviews" },
   { href: "/guides/vs-resumes-interviews", title: "Why resumes and interviews miss follow-through" },
+  { href: "/guides/cost-of-turnover", title: "What employee turnover really costs" },
+  { href: "/guides/regretted-attrition", title: "Regretted attrition: the number that matters" },
+  { href: "/guides/reduce-turnover-small-business", title: "How to reduce turnover in a small business" },
+  { href: "/guides/retain-top-performers", title: "How to keep your best people" },
 ];
 
 /** EOS spoke pages under /for-eos — used by the More on EOS + Prove cross-links. */
