@@ -4,11 +4,13 @@ import Footer from "@/components/Footer";
 import { RelatedGuides } from "@/components/RelatedLinks";
 import { Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 
 export const metadata: Metadata = {
   title: "Signs an Employee Is Quietly Checking Out (Before They Leave)",
   description:
     "Quiet quitting and disengagement are behavioral, not verbal. Learn the early signs an employee is coasting or checking out — and how to catch drift before it costs you.",
+  alternates: { canonical: "/guides/quiet-quitting" },
 };
 
 const TELLS = [
@@ -53,6 +55,17 @@ export default function QuietQuittingGuidePage() {
         People stay for security and coast &mdash; and by the time it shows up in
         results, momentum is already gone.
       </PageHero>
+
+      <ArticleMeta
+        headline="The signs an employee is quietly checking out."
+        description="Quiet quitting and disengagement are behavioral, not verbal. Learn the early signs an employee is coasting or checking out — and how to catch drift before it costs you."
+        canonical="/guides/quiet-quitting"
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "Guides", url: "/guides" },
+          { name: "Quiet quitting", url: "/guides/quiet-quitting" },
+        ]}
+      />
 
       <Section tone="paper" className="!pb-0">
         <Container>

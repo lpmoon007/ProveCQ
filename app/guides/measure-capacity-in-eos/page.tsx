@@ -5,11 +5,13 @@ import Footer from "@/components/Footer";
 import { RelatedGuides } from "@/components/RelatedLinks";
 import { Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 
 export const metadata: Metadata = {
   title: "How to Measure Capacity in EOS (Beyond the GWC Checkbox)",
   description:
     "In EOS, Capacity in GWC is treated as a yes/no checkbox. Learn how to actually measure capacity behaviorally so your People Analyzer and Quarterly Conversations run on data.",
+  alternates: { canonical: "/guides/measure-capacity-in-eos" },
 };
 
 const FAILS = [
@@ -53,6 +55,17 @@ export default function MeasureCapacityEosGuidePage() {
         gut-feel yes or no. That blind spot is where great hires stall and Rocks
         slip. Here is how to make it measurable.
       </PageHero>
+
+      <ArticleMeta
+        headline="How to measure capacity in EOS — beyond the checkbox."
+        description="In EOS, Capacity in GWC is treated as a yes/no checkbox. Learn how to actually measure capacity behaviorally so your People Analyzer and Quarterly Conversations run on data."
+        canonical="/guides/measure-capacity-in-eos"
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "Guides", url: "/guides" },
+          { name: "Measuring EOS capacity", url: "/guides/measure-capacity-in-eos" },
+        ]}
+      />
 
       <Section tone="paper" className="!pb-0">
         <Container>

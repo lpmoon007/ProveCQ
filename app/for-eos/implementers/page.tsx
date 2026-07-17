@@ -3,12 +3,14 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { ButtonLink, Container, Section } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "For EOS Implementers: The Capacity Tool You've Never Had",
   description:
     "EOS Implementers hit 'capacity issues' in nearly every session with no way to measure them. Prove is a behavioral capacity tool that plugs into the People Analyzer and Quarterly Conversations — a complement to your EOS practice you can bring to clients.",
+  alternates: { canonical: "/for-eos/implementers" },
 };
 
 const WHY_HELPS = [
@@ -51,6 +53,17 @@ export default function EosImplementersPage() {
         measure them. Prove is that missing instrument, built to sit inside the
         EOS conversations you already run.
       </PageHero>
+
+      <ArticleMeta
+        headline="The Capacity tool you've never had."
+        description="EOS Implementers hit 'capacity issues' in nearly every session with no way to measure them. Prove is a behavioral capacity tool that plugs into the People Analyzer and Quarterly Conversations — a complement to your EOS practice you can bring to clients."
+        canonical="/for-eos/implementers"
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "For EOS", url: "/for-eos" },
+          { name: "For Implementers", url: "/for-eos/implementers" },
+        ]}
+      />
 
       {/* Short answer */}
       <Section tone="paper">

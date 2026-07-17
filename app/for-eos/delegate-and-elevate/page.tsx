@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { RelatedEOS } from "@/components/RelatedLinks";
 import { ButtonLink, Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 import { site } from "@/lib/site";
 
 const CANONICAL = "/for-eos/delegate-and-elevate";
@@ -125,27 +126,9 @@ const faqJsonLd = {
   })),
 };
 
-const articleJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  headline: "Delegate and Elevate — but who can actually catch it?",
-  description:
-    "The Delegate and Elevate tool frees a leader's time by handing off the bottom two quadrants — but only if someone below has the proven capacity to catch it.",
-  author: { "@type": "Organization", name: "Prove", url: site.domain },
-  publisher: { "@type": "Organization", name: "Be Legendary", url: site.parentUrl },
-  mainEntityOfPage: `${site.domain}${CANONICAL}`,
-  about: "delegate and elevate",
-  keywords:
-    "delegate and elevate, delegate and elevate tool, delegate and elevate EOS, EOS delegation",
-};
-
 export default function EosDelegateAndElevatePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -161,6 +144,17 @@ export default function EosDelegateAndElevatePage() {
         capacity to catch the handoff &mdash; otherwise you&rsquo;ve just moved
         the bottleneck.
       </PageHero>
+
+      <ArticleMeta
+        headline="Delegate and Elevate — but who can actually catch it?"
+        description="The Delegate and Elevate tool frees a leader's time by handing off the bottom two quadrants. It only works if someone below has the proven capacity to catch it."
+        canonical={CANONICAL}
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "For EOS", url: "/for-eos" },
+          { name: "Delegate and Elevate", url: "/for-eos/delegate-and-elevate" },
+        ]}
+      />
 
       {/* Short answer */}
       <Section tone="paper">

@@ -3,12 +3,14 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { ButtonLink, Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "The Capacity Problem in EOS: Why GWC's Third Letter Is a Guess",
   description:
     'In EOS, Gets it and Wants it get judged over time — but Capacity is a yes/no checkbox, often self-reported. "I have capacity" usually means "I want to please you." Learn why capacity is the weak link in GWC and how behavioral proof fixes it, alongside EOS.',
+  alternates: { canonical: "/for-eos/capacity" },
 };
 
 const WHY_FAILS = [
@@ -55,6 +57,17 @@ export default function EosCapacityPage() {
         the Capacity in GWC. It gets treated as a checkbox &mdash; and that&rsquo;s
         where good people get mis-placed.
       </PageHero>
+
+      <ArticleMeta
+        headline="Capacity is the one GWC box you're guessing on."
+        description={'In EOS, Gets it and Wants it get judged over time — but Capacity is a yes/no checkbox, often self-reported. "I have capacity" usually means "I want to please you." Learn why capacity is the weak link in GWC and how behavioral proof fixes it, alongside EOS.'}
+        canonical="/for-eos/capacity"
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "For EOS", url: "/for-eos" },
+          { name: "The Capacity problem", url: "/for-eos/capacity" },
+        ]}
+      />
 
       {/* Short answer */}
       <Section tone="paper">

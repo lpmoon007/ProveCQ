@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { RelatedEOS } from "@/components/RelatedLinks";
 import { ButtonLink, Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 import { site } from "@/lib/site";
 
 const CANONICAL = "/for-eos/right-person-right-seat";
@@ -130,27 +131,9 @@ const faqJsonLd = {
   })),
 };
 
-const articleJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  headline: "Right Person, Right Seat: how to actually tell",
-  description:
-    "Right Person is core-values fit; Right Seat is GWC fit for the role right now. Its hidden Capacity judgment is where good people get mis-placed — and how to tell for real.",
-  author: { "@type": "Organization", name: "Prove", url: site.domain },
-  publisher: { "@type": "Organization", name: "Be Legendary", url: site.parentUrl },
-  mainEntityOfPage: `${site.domain}${CANONICAL}`,
-  about: "right person right seat",
-  keywords:
-    "right person right seat, right person right seat EOS, right people right seats, GWC right seat",
-};
-
 export default function RightPersonRightSeatPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -166,6 +149,17 @@ export default function RightPersonRightSeatPage() {
         Seat&rdquo; hides a Capacity judgment most teams make on a hunch. Here&rsquo;s
         how to tell for real.
       </PageHero>
+
+      <ArticleMeta
+        headline="Right Person, Right Seat: how to actually tell."
+        description="Right People share your core values; Right Seats fit GWC. But Right Seat hides a Capacity call most teams make on a hunch. How to tell for real, alongside EOS."
+        canonical={CANONICAL}
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "For EOS", url: "/for-eos" },
+          { name: "Right Person, Right Seat", url: "/for-eos/right-person-right-seat" },
+        ]}
+      />
 
       {/* Short answer */}
       <Section tone="paper">

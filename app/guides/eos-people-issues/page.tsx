@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { RelatedGuides } from "@/components/RelatedLinks";
 import { ButtonLink, Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 import { site } from "@/lib/site";
 
 const CANONICAL = "/guides/eos-people-issues";
@@ -106,27 +107,9 @@ const faqJsonLd = {
   })),
 };
 
-const articleJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  headline: "Solving the people issue your Level 10 keeps re-listing",
-  description:
-    "Why people issues stall in IDS — and how behavioral capacity evidence turns a circular Discuss into a real Solve that sticks past the next Level 10.",
-  author: { "@type": "Organization", name: "Prove", url: site.domain },
-  publisher: { "@type": "Organization", name: "Be Legendary", url: site.parentUrl },
-  mainEntityOfPage: `${site.domain}${CANONICAL}`,
-  about: "EOS people issues",
-  keywords:
-    "EOS people issues, IDS people issues, Level 10 people problems, people issues in EOS",
-};
-
 export default function EosPeopleIssuesPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -143,6 +126,17 @@ export default function EosPeopleIssuesPage() {
         isn&rsquo;t the person. It&rsquo;s that IDS is running on opinion instead
         of evidence.
       </PageHero>
+
+      <ArticleMeta
+        headline="Solving the people issue your Level 10 keeps re-listing."
+        description="People issues keep re-listing on your Level 10 because IDS runs on opinion not data. See how behavioral capacity evidence turns a circular Discuss into a Solve."
+        canonical={CANONICAL}
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "Guides", url: "/guides" },
+          { name: "EOS people issues", url: "/guides/eos-people-issues" },
+        ]}
+      />
 
       {/* Short answer */}
       <Section tone="paper">

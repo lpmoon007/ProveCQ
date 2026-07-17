@@ -4,11 +4,13 @@ import Footer from "@/components/Footer";
 import { RelatedGuides } from "@/components/RelatedLinks";
 import { Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 
 export const metadata: Metadata = {
   title: "How to Use the First 90 Days to Prove a New Hire",
   description:
     "The first 90 days are your real interview. Learn how to use onboarding as a proving ground to confirm — or disprove — whether a new hire will deliver.",
+  alternates: { canonical: "/guides/first-90-days" },
 };
 
 const WATCH = [
@@ -53,6 +55,17 @@ export default function First90DaysGuidePage() {
         true. Treated deliberately, the first 90 days become the most honest
         performance signal you will ever get on a new hire.
       </PageHero>
+
+      <ArticleMeta
+        headline="Use the first 90 days to prove a new hire."
+        description="The first 90 days are your real interview. Learn how to use onboarding as a proving ground to confirm — or disprove — whether a new hire will deliver."
+        canonical="/guides/first-90-days"
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "Guides", url: "/guides" },
+          { name: "First 90 days", url: "/guides/first-90-days" },
+        ]}
+      />
 
       <Section tone="paper" className="!pb-0">
         <Container>

@@ -4,11 +4,13 @@ import Footer from "@/components/Footer";
 import { RelatedGuides } from "@/components/RelatedLinks";
 import { Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 
 export const metadata: Metadata = {
   title: "Why Your Best People Are Burning Out (It is Not the Workload)",
   description:
     "Top performers rarely burn out from hours — they burn out from carrying passengers and watching drift go unaddressed. Learn the real cause and how to protect your best people.",
+  alternates: { canonical: "/guides/burned-out-top-performers" },
 };
 
 const DRIVERS = [
@@ -53,6 +55,20 @@ export default function BurnedOutGuidePage() {
         from hours &mdash; they break from carrying people who coast, and from
         watching drift go unaddressed while they pick up the slack.
       </PageHero>
+
+      <ArticleMeta
+        headline="Why your best people are burning out."
+        description="Top performers rarely burn out from hours — they burn out from carrying passengers and watching drift go unaddressed. Learn the real cause and how to protect your best people."
+        canonical="/guides/burned-out-top-performers"
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "Guides", url: "/guides" },
+          {
+            name: "Best people burning out",
+            url: "/guides/burned-out-top-performers",
+          },
+        ]}
+      />
 
       <Section tone="paper" className="!pb-0">
         <Container>

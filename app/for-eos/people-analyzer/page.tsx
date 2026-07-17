@@ -3,12 +3,14 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { ButtonLink, Container, Section } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Give Your EOS People Analyzer a Real Capacity Score",
   description:
     "The EOS People Analyzer scores everyone on GWC and core values — but Capacity stays a guess. Prove adds a behavioral capacity signal (initiative, applied grit, learnability) so your People Analyzer runs on evidence, alongside EOS, not instead of it.",
+  alternates: { canonical: "/for-eos/people-analyzer" },
 };
 
 const FIT = [
@@ -50,6 +52,17 @@ export default function EosPeopleAnalyzerPage() {
         Capacity guess with a behavioral signal &mdash; so the People Analyzer
         conversation stops stalling on the one box no one can defend.
       </PageHero>
+
+      <ArticleMeta
+        headline="Give your People Analyzer a real Capacity score."
+        description="The EOS People Analyzer scores everyone on GWC and core values — but Capacity stays a guess. Prove adds a behavioral capacity signal (initiative, applied grit, learnability) so your People Analyzer runs on evidence, alongside EOS, not instead of it."
+        canonical="/for-eos/people-analyzer"
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "For EOS", url: "/for-eos" },
+          { name: "People Analyzer", url: "/for-eos/people-analyzer" },
+        ]}
+      />
 
       {/* Short answer */}
       <Section tone="paper">

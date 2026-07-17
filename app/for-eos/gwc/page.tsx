@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { RelatedEOS } from "@/components/RelatedLinks";
 import { ButtonLink, Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 import { site } from "@/lib/site";
 
 const CANONICAL = "/for-eos/gwc";
@@ -108,27 +109,9 @@ const faqJsonLd = {
   })),
 };
 
-const articleJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  headline: "GWC: Gets it, Wants it, Capacity — explained",
-  description:
-    "GWC is the heart of the EOS People Analyzer. Gets it and Wants it reveal themselves over time; Capacity is the box most teams guess on. How to score GWC on evidence.",
-  author: { "@type": "Organization", name: "Prove", url: site.domain },
-  publisher: { "@type": "Organization", name: "Be Legendary", url: site.parentUrl },
-  mainEntityOfPage: `${site.domain}${CANONICAL}`,
-  about: "GWC",
-  keywords:
-    "GWC, GWC EOS, gets it wants it capacity, GWC people analyzer, how to score GWC",
-};
-
 export default function EosGwcPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -144,6 +127,17 @@ export default function EosGwcPage() {
         &mdash; Capacity &mdash; gets a checkbox. This is the definitive read on
         what GWC means and how to score it on evidence, not a hunch.
       </PageHero>
+
+      <ArticleMeta
+        headline="GWC: Gets it, Wants it — and the box you guess on."
+        description="GWC is the heart of the EOS People Analyzer. Gets it and Wants it reveal themselves over time; Capacity is the box most teams guess on. Learn to score GWC."
+        canonical={CANONICAL}
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "For EOS", url: "/for-eos" },
+          { name: "GWC", url: "/for-eos/gwc" },
+        ]}
+      />
 
       {/* Short answer */}
       <Section tone="paper">

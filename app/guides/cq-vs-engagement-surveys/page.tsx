@@ -5,21 +5,13 @@ import Footer from "@/components/Footer";
 import { RelatedGuides } from "@/components/RelatedLinks";
 import { Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 
 export const metadata: Metadata = {
   title: "CQ vs. Engagement Surveys: Why Feelings Don't Predict Delivery",
   description:
     "Engagement surveys measure how employees feel; the Commitment Quotient measures how they behave under pressure. Here's why high engagement scores can hide poor delivery — and what to measure instead to know who will actually perform.",
-};
-
-const ARTICLE_LD = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  headline: "CQ vs. Engagement Surveys: Why Feelings Don't Predict Delivery",
-  author: { "@type": "Organization", name: "Be Legendary" },
-  publisher: { "@type": "Organization", name: "Be Legendary" },
-  about:
-    "The difference between measuring employee sentiment (engagement surveys) and measuring behavior under pressure (Commitment Quotient).",
+  alternates: { canonical: "/guides/cq-vs-engagement-surveys" },
 };
 
 const SURVEY = [
@@ -44,10 +36,6 @@ export default function CqVsEngagementSurveysGuidePage() {
   return (
     <>
       <Nav />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ARTICLE_LD) }}
-      />
       <PageHero
         crumb="Guides › CQ vs. engagement surveys"
         eyebrow="Comparison"
@@ -57,6 +45,20 @@ export default function CqVsEngagementSurveysGuidePage() {
         <em>feels</em>. The other tells you who will <em>deliver</em>. You need
         both — but only one predicts who to bet on.
       </PageHero>
+
+      <ArticleMeta
+        headline="CQ vs. engagement surveys"
+        description="Engagement surveys measure how employees feel; the Commitment Quotient measures how they behave under pressure. Here's why high engagement scores can hide poor delivery — and what to measure instead to know who will actually perform."
+        canonical="/guides/cq-vs-engagement-surveys"
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "Guides", url: "/guides" },
+          {
+            name: "CQ vs. engagement surveys",
+            url: "/guides/cq-vs-engagement-surveys",
+          },
+        ]}
+      />
 
       <Section tone="paper" className="!pb-0">
         <Container>

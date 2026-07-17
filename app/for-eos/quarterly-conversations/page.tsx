@@ -3,12 +3,14 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { ButtonLink, Container, Section } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Better EOS Quarterly Conversations, Backed by Behavior",
   description:
     "Quarterly Conversations work best with objective data. Prove brings a behavioral capacity signal to the discussion so leaders and team members talk about what someone actually did — not gut feel — making the conversation fairer and more useful. Alongside EOS.",
+  alternates: { canonical: "/for-eos/quarterly-conversations" },
 };
 
 const ADDS = [
@@ -40,6 +42,17 @@ export default function EosQuarterlyConversationsPage() {
         &mdash; initiative taken, follow-through under pressure, growth pursued
         &mdash; instead of trading impressions.
       </PageHero>
+
+      <ArticleMeta
+        headline="Quarterly Conversations, backed by behavior."
+        description="Quarterly Conversations work best with objective data. Prove brings a behavioral capacity signal to the discussion so leaders and team members talk about what someone actually did — not gut feel — making the conversation fairer and more useful. Alongside EOS."
+        canonical="/for-eos/quarterly-conversations"
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "For EOS", url: "/for-eos" },
+          { name: "Quarterly Conversations", url: "/for-eos/quarterly-conversations" },
+        ]}
+      />
 
       {/* Short answer */}
       <Section tone="paper">

@@ -4,12 +4,14 @@ import Footer from "@/components/Footer";
 import { RelatedGuides } from "@/components/RelatedLinks";
 import { Container, Section, ButtonLink } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "The 2026 State of Engagement Report",
   description:
     "Engagement scores have barely moved in a decade while disengagement costs trillions. The 2026 State of Engagement report explains why the metric itself is broken for small and mid-sized companies — and makes the case for measuring commitment behavior instead.",
+  alternates: { canonical: "/guides/state-of-engagement" },
 };
 
 const STATS = [
@@ -75,6 +77,17 @@ export default function StateOfEngagementPage() {
         metric. This report makes the case for what to measure instead:{" "}
         <strong className="text-paper">commitment behavior.</strong>
       </PageHero>
+
+      <ArticleMeta
+        headline="The 2026 State of Engagement"
+        description="Engagement scores have barely moved in a decade while disengagement costs trillions. The 2026 State of Engagement report explains why the metric itself is broken for small and mid-sized companies — and makes the case for measuring commitment behavior instead."
+        canonical="/guides/state-of-engagement"
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "Guides", url: "/guides" },
+          { name: "2026 State of Engagement", url: "/guides/state-of-engagement" },
+        ]}
+      />
 
       {/* headline stats */}
       <Section tone="paper" className="!pb-5">

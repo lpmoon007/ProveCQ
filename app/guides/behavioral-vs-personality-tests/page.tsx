@@ -4,12 +4,14 @@ import Footer from "@/components/Footer";
 import { RelatedGuides } from "@/components/RelatedLinks";
 import { Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 
 export const metadata: Metadata = {
   title:
     "Behavioral Assessment vs. Personality Test: What is the Difference?",
   description:
     "Personality tests measure who someone says they are; behavioral assessment measures what they actually do. Learn the difference and why behavior predicts performance.",
+  alternates: { canonical: "/guides/behavioral-vs-personality-tests" },
 };
 
 const PERSONALITY = [
@@ -41,6 +43,20 @@ export default function BehavioralVsPersonalityGuidePage() {
         describe themselves. The other watches what they do. Only one of those
         predicts whether someone will deliver.
       </PageHero>
+
+      <ArticleMeta
+        headline="Behavioral assessment vs. personality test."
+        description="Personality tests measure who someone says they are; behavioral assessment measures what they actually do. Learn the difference and why behavior predicts performance."
+        canonical="/guides/behavioral-vs-personality-tests"
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "Guides", url: "/guides" },
+          {
+            name: "Behavioral vs. personality",
+            url: "/guides/behavioral-vs-personality-tests",
+          },
+        ]}
+      />
 
       <Section tone="paper" className="!pb-0">
         <Container>

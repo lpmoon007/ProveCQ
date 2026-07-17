@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { RelatedGuides } from "@/components/RelatedLinks";
 import { ButtonLink, Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 import { site } from "@/lib/site";
 
 const CANONICAL = "/guides/high-potential-employees";
@@ -107,27 +108,9 @@ const faqJsonLd = {
   })),
 };
 
-const articleJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  headline: "How to identify high-potential employees",
-  description:
-    "The behavioral signals and characteristics that separate high-potential employees from high performers — and how to identify them early.",
-  author: { "@type": "Organization", name: "Prove", url: site.domain },
-  publisher: { "@type": "Organization", name: "Be Legendary", url: site.parentUrl },
-  mainEntityOfPage: `${site.domain}${CANONICAL}`,
-  about: "high-potential employees",
-  keywords:
-    "high-potential employees, how to identify high-potential employees, high potential characteristics, high potential assessment",
-};
-
 export default function HighPotentialEmployeesPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -142,6 +125,20 @@ export default function HighPotentialEmployeesPage() {
         tomorrow. Potential is about the capacity to grow into bigger demands
         &mdash; and that shows up in behavior, not in this quarter&rsquo;s numbers.
       </PageHero>
+
+      <ArticleMeta
+        headline="How to identify high-potential employees."
+        description="High potential is not high performance. Learn how to identify high-potential employees from behavioral signals — initiative, applied grit, and learnability — the characteristics that separate real potential from this quarter's numbers."
+        canonical={CANONICAL}
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "Guides", url: "/guides" },
+          {
+            name: "High-potential employees",
+            url: "/guides/high-potential-employees",
+          },
+        ]}
+      />
 
       <Section tone="paper">
         <Container>

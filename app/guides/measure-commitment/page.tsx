@@ -4,11 +4,13 @@ import Footer from "@/components/Footer";
 import { RelatedGuides } from "@/components/RelatedLinks";
 import { Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 
 export const metadata: Metadata = {
   title: "How to Measure Employee Commitment (For Real)",
   description:
     "Commitment is not a feeling you survey — it is a behavior you observe. Learn how to measure employee commitment with behavioral signals instead of self-report.",
+  alternates: { canonical: "/guides/measure-commitment" },
 };
 
 const TOOLS = [
@@ -48,6 +50,17 @@ export default function MeasureCommitmentGuidePage() {
         Commitment is different: it is what they do, repeatedly, when it is hard.
         That is measurable &mdash; if you measure behavior, not opinion.
       </PageHero>
+
+      <ArticleMeta
+        headline="How to measure employee commitment — for real."
+        description="Commitment is not a feeling you survey — it is a behavior you observe. Learn how to measure employee commitment with behavioral signals instead of self-report."
+        canonical="/guides/measure-commitment"
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "Guides", url: "/guides" },
+          { name: "Measuring commitment", url: "/guides/measure-commitment" },
+        ]}
+      />
 
       <Section tone="paper" className="!pb-0">
         <Container>

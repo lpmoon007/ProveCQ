@@ -5,12 +5,14 @@ import Footer from "@/components/Footer";
 import { RelatedGuides } from "@/components/RelatedLinks";
 import { ButtonLink, Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Promote From Within or Hire Outside? How to Decide",
   description:
     "Promoting from within builds loyalty but risks the Peter Principle; hiring outside brings skills but risks culture and cost. Learn how to decide with behavioral proof.",
+  alternates: { canonical: "/guides/promote-vs-hire" },
 };
 
 const WITHIN = [
@@ -48,6 +50,17 @@ export default function PromoteVsHirePage() {
         great doer and gain a struggling manager. Hire the wrong outsider and you
         pay a premium for a culture misfit. Proof breaks the tie.
       </PageHero>
+
+      <ArticleMeta
+        headline="Promote from within, or hire outside?"
+        description="Promoting from within builds loyalty but risks the Peter Principle; hiring outside brings skills but risks culture and cost. Learn how to decide with behavioral proof."
+        canonical="/guides/promote-vs-hire"
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "Guides", url: "/guides" },
+          { name: "Promote vs. hire", url: "/guides/promote-vs-hire" },
+        ]}
+      />
 
       <Section tone="paper">
         <Container>

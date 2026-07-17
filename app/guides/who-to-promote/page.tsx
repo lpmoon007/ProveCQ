@@ -5,12 +5,14 @@ import Footer from "@/components/Footer";
 import { RelatedGuides } from "@/components/RelatedLinks";
 import { ButtonLink, Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "How to Know Who to Promote — Without Guessing",
   description:
     "Most promotions are bets on past performance, not future capacity. Learn how to know who to promote using behavioral proof — Initiative, Applied Grit, and Learnability — instead of gut feel.",
+  alternates: { canonical: "/guides/who-to-promote" },
 };
 
 const WHY = [
@@ -59,6 +61,17 @@ export default function WhoToPromotePage() {
         leader. Promoting on past performance is how a six-figure mistake starts.
         Here is how to bet on proof instead.
       </PageHero>
+
+      <ArticleMeta
+        headline="How to know who to promote — without guessing."
+        description="Most promotions are bets on past performance, not future capacity. Learn how to know who to promote using behavioral proof — Initiative, Applied Grit, and Learnability — instead of gut feel."
+        canonical="/guides/who-to-promote"
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "Guides", url: "/guides" },
+          { name: "Who to promote", url: "/guides/who-to-promote" },
+        ]}
+      />
 
       <Section tone="paper">
         <Container>

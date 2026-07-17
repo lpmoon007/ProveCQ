@@ -5,12 +5,14 @@ import Footer from "@/components/Footer";
 import { RelatedGuides } from "@/components/RelatedLinks";
 import { ButtonLink, Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "How to Build a Leadership Bench Before You Need It",
   description:
     "Scaling stalls when leadership cannot keep up. Learn how to build a leadership bench early by proving and developing your highest-capacity people before the need is urgent.",
+  alternates: { canonical: "/guides/leadership-bench" },
 };
 
 const WHY = [
@@ -55,6 +57,17 @@ export default function LeadershipBenchPage() {
         built their next layer of leaders <em>before</em> the crunch &mdash; not
         in a panic after a key person left or a new team appeared.
       </PageHero>
+
+      <ArticleMeta
+        headline="Build a leadership bench before you need it."
+        description="Scaling stalls when leadership cannot keep up. Learn how to build a leadership bench early by proving and developing your highest-capacity people before the need is urgent."
+        canonical="/guides/leadership-bench"
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "Guides", url: "/guides" },
+          { name: "Leadership bench", url: "/guides/leadership-bench" },
+        ]}
+      />
 
       <Section tone="paper">
         <Container>

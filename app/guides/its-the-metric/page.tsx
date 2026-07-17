@@ -4,12 +4,14 @@ import Footer from "@/components/Footer";
 import { RelatedGuides } from "@/components/RelatedLinks";
 import { Container, Eyebrow, Section, ButtonLink } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "The Problem Isn't Your People. It's the Metric.",
   description:
     "Only 21% of the workforce is 'engaged,' says Gallup. But engagement measures how people feel about their environment — not how they behave under pressure. Here's why engagement is the wrong metric, and what to measure instead: commitment behavior.",
+  alternates: { canonical: "/guides/its-the-metric" },
 };
 
 const BEHAVIORS = [
@@ -36,6 +38,17 @@ export default function ItsTheMetricPage() {
         mentally checked out. Look around your team. You know that isn&rsquo;t
         right.
       </PageHero>
+
+      <ArticleMeta
+        headline="The problem isn't your people. It's the metric."
+        description="Only 21% of the workforce is 'engaged,' says Gallup. But engagement measures how people feel about their environment — not how they behave under pressure. Here's why engagement is the wrong metric, and what to measure instead: commitment behavior."
+        canonical="/guides/its-the-metric"
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "Guides", url: "/guides" },
+          { name: "The metric is the problem", url: "/guides/its-the-metric" },
+        ]}
+      />
 
       <Section tone="paper">
         <Container className="max-w-[720px]">

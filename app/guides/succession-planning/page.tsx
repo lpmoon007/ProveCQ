@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { RelatedGuides } from "@/components/RelatedLinks";
 import { ButtonLink, Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
     "Succession Planning for Small Business (Without a Big HR Team)",
   description:
     "Succession planning is not just for the corner office. Learn how small businesses can build a bench and plan succession for key roles using behavioral proof.",
+  alternates: { canonical: "/guides/succession-planning" },
 };
 
 const GAP = [
@@ -56,6 +58,17 @@ export default function SuccessionPlanningPage() {
         &mdash; and no bench. Succession planning is not a corporate luxury; it is
         how a scaling business protects its own continuity.
       </PageHero>
+
+      <ArticleMeta
+        headline="Succession planning for small business."
+        description="Succession planning is not just for the corner office. Learn how small businesses can build a bench and plan succession for key roles using behavioral proof."
+        canonical="/guides/succession-planning"
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "Guides", url: "/guides" },
+          { name: "Succession planning", url: "/guides/succession-planning" },
+        ]}
+      />
 
       <Section tone="paper">
         <Container>

@@ -5,12 +5,14 @@ import Footer from "@/components/Footer";
 import { RelatedGuides } from "@/components/RelatedLinks";
 import { ButtonLink, Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "The Real Cost of a Bad Hire (and How to Avoid It)",
   description:
     "A bad hire costs far more than a salary — 40% to 200% of it, plus momentum and morale. Learn the true cost of a bad hire and how behavioral proof reduces the risk.",
+  alternates: { canonical: "/guides/cost-of-a-bad-hire" },
 };
 
 const HIDES = [
@@ -54,6 +56,17 @@ export default function CostOfABadHirePage() {
         It is never just a wasted salary. A bad hire drains your team, your time,
         and your momentum &mdash; and the more senior the role, the more it hurts.
       </PageHero>
+
+      <ArticleMeta
+        headline="The real cost of a bad hire."
+        description="A bad hire costs far more than a salary — 40% to 200% of it, plus momentum and morale. Learn the true cost of a bad hire and how behavioral proof reduces the risk."
+        canonical="/guides/cost-of-a-bad-hire"
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "Guides", url: "/guides" },
+          { name: "Cost of a bad hire", url: "/guides/cost-of-a-bad-hire" },
+        ]}
+      />
 
       <Section tone="paper">
         <Container>

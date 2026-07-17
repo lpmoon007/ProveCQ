@@ -5,12 +5,14 @@ import Footer from "@/components/Footer";
 import { RelatedGuides } from "@/components/RelatedLinks";
 import { ButtonLink, Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "How to Hire People Who Actually Follow Through",
   description:
     "Interviews reward people who talk well, not people who follow through. Learn how to hire for behavior — initiative, applied grit, and learnability — so your next hire delivers.",
+  alternates: { canonical: "/guides/hire-for-follow-through" },
 };
 
 const MISLEAD = [
@@ -59,6 +61,17 @@ export default function HireFollowThroughPage() {
         Interviews test how well someone talks about work &mdash; not whether they
         do it when no one is watching.
       </PageHero>
+
+      <ArticleMeta
+        headline="How to hire people who actually follow through."
+        description="Interviews reward people who talk well, not people who follow through. Learn how to hire for behavior — initiative, applied grit, and learnability — so your next hire delivers."
+        canonical="/guides/hire-for-follow-through"
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "Guides", url: "/guides" },
+          { name: "Hiring for follow-through", url: "/guides/hire-for-follow-through" },
+        ]}
+      />
 
       <Section tone="paper">
         <Container>

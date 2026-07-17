@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { RelatedEOS } from "@/components/RelatedLinks";
 import { ButtonLink, Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 import { site } from "@/lib/site";
 
 const CANONICAL = "/for-eos/accountability-chart";
@@ -99,27 +100,9 @@ const faqJsonLd = {
   })),
 };
 
-const articleJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  headline: "The Accountability Chart: are the right people in the seats?",
-  description:
-    "How the EOS Accountability Chart maps seats and owners, how it differs from an org chart, and how to prove the person in each seat has the capacity for it.",
-  author: { "@type": "Organization", name: "Prove", url: site.domain },
-  publisher: { "@type": "Organization", name: "Be Legendary", url: site.parentUrl },
-  mainEntityOfPage: `${site.domain}${CANONICAL}`,
-  about: "accountability chart",
-  keywords:
-    "accountability chart, accountability chart vs org chart, EOS accountability chart, one person per seat",
-};
-
 export default function EosAccountabilityChartPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -139,6 +122,17 @@ export default function EosAccountabilityChartPage() {
         person&rsquo;s proven capacity for it &mdash; and that&rsquo;s the part the
         chart can&rsquo;t answer on its own.
       </PageHero>
+
+      <ArticleMeta
+        headline="The Accountability Chart: are the right people in the seats?"
+        description="The EOS Accountability Chart maps the seats your business needs and one owner per seat. Learn how it differs from an org chart — and how to prove each seat's Capacity."
+        canonical={CANONICAL}
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "For EOS", url: "/for-eos" },
+          { name: "Accountability Chart", url: "/for-eos/accountability-chart" },
+        ]}
+      />
 
       {/* Short answer */}
       <Section tone="paper">

@@ -5,12 +5,14 @@ import Footer from "@/components/Footer";
 import { RelatedGuides } from "@/components/RelatedLinks";
 import { ButtonLink, Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Why Good Employees Fail After a Promotion",
   description:
     "When a strong performer flops after promotion, it is usually a capacity mismatch, not a character flaw. Learn why good employees fail after promotion and how to prevent it.",
+  alternates: { canonical: "/guides/failed-promotion" },
 };
 
 const MISMATCHES = [
@@ -55,6 +57,17 @@ export default function FailedPromotionPage() {
         It was not &mdash; it was a predictable mismatch between the behavior the
         old role rewarded and the behavior the new one demands.
       </PageHero>
+
+      <ArticleMeta
+        headline="Why good employees fail after a promotion."
+        description="When a strong performer flops after promotion, it is usually a capacity mismatch, not a character flaw. Learn why good employees fail after promotion and how to prevent it."
+        canonical="/guides/failed-promotion"
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "Guides", url: "/guides" },
+          { name: "Failed promotions", url: "/guides/failed-promotion" },
+        ]}
+      />
 
       <Section tone="paper">
         <Container>

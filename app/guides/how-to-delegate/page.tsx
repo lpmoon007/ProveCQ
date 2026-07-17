@@ -4,11 +4,13 @@ import Footer from "@/components/Footer";
 import { RelatedGuides } from "@/components/RelatedLinks";
 import { Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
+import { ArticleMeta } from "@/components/ArticleMeta";
 
 export const metadata: Metadata = {
   title: "How to Delegate With Confidence (Stop Being the Bottleneck)",
   description:
     "Founders stay the bottleneck because they do not trust who to hand work to. Learn how to delegate with confidence by proving who can actually own the outcome.",
+  alternates: { canonical: "/guides/how-to-delegate" },
 };
 
 const STUCK = [
@@ -53,6 +55,17 @@ export default function DelegateGuidePage() {
         problem is not that you cannot let go &mdash; it is that you have no proof
         of who will actually own the outcome when you do.
       </PageHero>
+
+      <ArticleMeta
+        headline="How to delegate with confidence."
+        description="Founders stay the bottleneck because they do not trust who to hand work to. Learn how to delegate with confidence by proving who can actually own the outcome."
+        canonical="/guides/how-to-delegate"
+        crumbs={[
+          { name: "Home", url: "" },
+          { name: "Guides", url: "/guides" },
+          { name: "Delegating with confidence", url: "/guides/how-to-delegate" },
+        ]}
+      />
 
       <Section tone="paper" className="!pb-0">
         <Container>
