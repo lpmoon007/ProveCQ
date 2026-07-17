@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { site } from "@/lib/site";
+import { track } from "@/lib/analytics";
 
 type Question = { cat: string; q: string };
 type Option = { label: string; v: number };
@@ -70,7 +71,14 @@ export default function CertaintyDiagnostic() {
     const next = answers.slice(0, i);
     next[i] = v;
     setAnswers(next);
-    setI(i + 1);
+    const advanced = i + 1;
+    setI(advanced);
+    if (advanced >= total) {
+      const raw = next.reduce((a, b) => a + (b || 0), 0);
+      track("diagnostic_complete", {
+        score: Math.round((raw / (total * 3)) * 100),
+      });
+    }
   }
 
   function back() {
