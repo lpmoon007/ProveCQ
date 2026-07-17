@@ -4,6 +4,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
+import CQDiagram from "@/components/CQDiagram";
 
 export const metadata: Metadata = {
   title: "How Prove Works — Behavioral Proof in Six Weeks",
@@ -105,6 +106,23 @@ export default function HowItWorksPage() {
               </div>
             ))}
           </div>
+        </Container>
+      </Section>
+
+      {/* What the score is made of */}
+      <Section tone="paper2">
+        <Container className="max-w-[900px]">
+          <div className="mb-8 text-center">
+            <Eyebrow>The score</Eyebrow>
+            <h2 className="mx-auto mt-3 max-w-[620px] font-display text-[28px] font-bold tracking-[-.02em] sm:text-[34px]">
+              What the Commitment Quotient is made of
+            </h2>
+            <p className="mx-auto mt-3 max-w-[600px] text-[16px] leading-[1.6] text-content-muted">
+              Three observable behaviors, weighted into a single score you can act
+              on &mdash; measured from what people do, not what they say.
+            </p>
+          </div>
+          <CQDiagram />
         </Container>
       </Section>
 
