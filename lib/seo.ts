@@ -8,6 +8,8 @@ import { site } from "./site";
 export const AUTHOR = {
   name: "James Carter",
   jobTitle: "Founder, Be Legendary",
+  // Relative path for on-page links; absolute `url` for schema.
+  path: "/author/james-carter",
   url: `${site.domain}/author/james-carter`,
   sameAs: [site.parentUrl] as string[],
 };
