@@ -30,6 +30,7 @@ const GUIDES: { label: string; title: string; body: string; href: string; dark?:
   { label: "Retention", title: "Why your best people are burning out", body: "It is not the workload — it is the passengers.", href: "/guides/burned-out-top-performers" },
   { label: "Founder leverage", title: "How to delegate with confidence", body: "Stop being the bottleneck.", href: "/guides/how-to-delegate" },
   { label: "For EOS", title: "How to measure capacity in EOS", body: "Beyond the GWC yes/no checkbox.", href: "/guides/measure-capacity-in-eos" },
+  { label: "For EOS", title: "Solving people issues in your Level 10 / IDS", body: "Stop re-listing the same people problem every week.", href: "/guides/eos-people-issues" },
   { label: "How it works", title: "Behavioral assessment vs. personality test", body: "The test drive beats the paper exam.", href: "/guides/behavioral-vs-personality-tests" },
   { label: "Point of view", title: "The problem isn't your people. It's the metric.", body: "Why engagement is the wrong measure — and what to track instead.", href: "/guides/its-the-metric", dark: true },
   { label: "2026 report", title: "The 2026 State of Engagement", body: "The metric is broken. Here's the case for measuring commitment.", href: "/guides/state-of-engagement", dark: true },

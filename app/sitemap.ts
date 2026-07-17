@@ -28,6 +28,10 @@ const ROUTES = [
   "/free-tools/get-to-green",
   // EOS spokes
   "/for-eos/capacity",
+  "/for-eos/gwc",
+  "/for-eos/right-person-right-seat",
+  "/for-eos/accountability-chart",
+  "/for-eos/delegate-and-elevate",
   "/for-eos/people-analyzer",
   "/for-eos/quarterly-conversations",
   "/for-eos/implementers",
@@ -56,6 +60,7 @@ const ROUTES = [
   "/guides/cq-vs-engagement-surveys",
   "/guides/its-the-metric",
   "/guides/state-of-engagement",
+  "/guides/eos-people-issues",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

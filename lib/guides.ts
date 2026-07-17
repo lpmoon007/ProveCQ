@@ -23,6 +23,19 @@ export const GUIDE_ARTICLES: GuideRef[] = [
   { href: "/guides/cq-vs-engagement-surveys", title: "CQ vs. engagement surveys" },
   { href: "/guides/its-the-metric", title: "The problem isn't your people. It's the metric." },
   { href: "/guides/state-of-engagement", title: "The 2026 State of Engagement" },
+  { href: "/guides/eos-people-issues", title: "Solving people issues in your Level 10 / IDS" },
+];
+
+/** EOS spoke pages under /for-eos — used by the More on EOS + Prove cross-links. */
+export const EOS_SPOKES: GuideRef[] = [
+  { href: "/for-eos/gwc", title: "GWC: making the Capacity box measurable" },
+  { href: "/for-eos/right-person-right-seat", title: "Right Person, Right Seat: how to actually tell" },
+  { href: "/for-eos/accountability-chart", title: "The Accountability Chart: right people in the seats?" },
+  { href: "/for-eos/delegate-and-elevate", title: "Delegate & Elevate without guessing who can catch it" },
+  { href: "/for-eos/capacity", title: "The Capacity problem in GWC" },
+  { href: "/for-eos/people-analyzer", title: "A real Capacity score for the People Analyzer" },
+  { href: "/for-eos/quarterly-conversations", title: "Better Quarterly Conversations" },
+  { href: "/for-eos/implementers", title: "For EOS Implementers" },
 ];
 
 /** Free-tool pages — used by the More Free Tools cross-links. */

@@ -32,6 +32,26 @@ const LEADER_POINTS = [
 
 const DEEPER = [
   {
+    title: "GWC, and the box you're guessing on",
+    body: "Gets it, Wants it, Capacity — and why the third letter needs evidence.",
+    href: "/for-eos/gwc",
+  },
+  {
+    title: "Right Person, Right Seat",
+    body: "How to actually tell — beyond core values and a GWC hunch.",
+    href: "/for-eos/right-person-right-seat",
+  },
+  {
+    title: "The Accountability Chart",
+    body: "Are the right people in the seats? Prove the capacity behind each one.",
+    href: "/for-eos/accountability-chart",
+  },
+  {
+    title: "Delegate and Elevate",
+    body: "You can only delegate down if someone below can catch it.",
+    href: "/for-eos/delegate-and-elevate",
+  },
+  {
     title: "The Capacity problem in GWC",
     body: "Why the third letter is a guess — and how behavior fixes it.",
     href: "/for-eos/capacity",
@@ -45,6 +65,11 @@ const DEEPER = [
     title: "Better Quarterly Conversations",
     body: "Objective behavioral data for a fairer conversation.",
     href: "/for-eos/quarterly-conversations",
+  },
+  {
+    title: "People issues in your Level 10 / IDS",
+    body: "Resolve the recurring people problem your L10 keeps re-listing.",
+    href: "/guides/eos-people-issues",
   },
   {
     title: "For EOS Implementers",
