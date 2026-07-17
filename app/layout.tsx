@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Space_Grotesk, Figtree } from "next/font/google";
 import { site } from "@/lib/site";
 import "./globals.css";
@@ -79,6 +80,17 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
         />
+        {/* Google Analytics 4 (gtag.js) */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${site.gaMeasurementId}`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${site.gaMeasurementId}');`}
+        </Script>
         {children}
       </body>
     </html>
