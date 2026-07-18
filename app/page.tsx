@@ -181,8 +181,9 @@ export default function HomePage() {
             <div>
               <Eyebrow tone="soft">Proof, not another test</Eyebrow>
               <h2 className="mb-[18px] mt-3.5 font-display text-[32px] font-bold leading-[1.08] tracking-[-.02em] sm:text-[42px]">
-                We measure what people <span className="text-green-soft">do</span>{" "}
-                — under pressure. Not what they say.
+                See what your people actually{" "}
+                <span className="text-green-soft">do</span> — under pressure. Not
+                what they say.
               </h2>
               <p className="m-0 mb-[22px] text-[17px] leading-[1.65] text-[#B8B4A6]">
                 360s are slow and vague. Performance reviews look backward.
@@ -250,20 +251,20 @@ export default function HomePage() {
       {/* WHY WE BUILT PROVE */}
       <section className="bg-paper-2 px-5 py-16 sm:px-8 md:py-[84px]">
         <Container className="max-w-[900px] text-center">
-          <Eyebrow>Why we built Prove</Eyebrow>
+          <Eyebrow>Why Prove exists</Eyebrow>
           <h2 className="mb-5 mt-3.5 font-display text-[30px] font-bold leading-[1.1] tracking-[-.02em] sm:text-[40px]">
-            We didn&rsquo;t theorize this. We lived it &mdash; hundreds of times.
+            You&rsquo;re not the first leader to watch this happen.
           </h2>
           <p className="mx-auto mb-4 max-w-[720px] text-[18px] leading-[1.65] text-[#3A362C]">
-            For twenty-five years we worked inside small and mid-sized companies
-            across every industry. And we watched the same thing break, over and
-            over: the wrong people hired, the wrong people promoted, and the right
-            people quietly lost. Not because leaders lacked judgment &mdash;
-            because they had no signal they could trust.
+            Across twenty-five years inside small and mid-sized companies, the
+            same thing breaks over and over: the wrong people hired, the wrong
+            people promoted, and the right people quietly lost. Not because
+            leaders like you lack judgment &mdash; because you&rsquo;ve had no
+            signal you could trust.
           </p>
           <p className="mx-auto m-0 max-w-[720px] text-[18px] leading-[1.65] text-[#3A362C]">
-            Prove is what we built to fix it: a way to give SMB leaders real
-            certainty in the people decisions that make or break them.
+            That&rsquo;s the gap Prove closes: real certainty in the people
+            decisions that make or break your company.
           </p>
         </Container>
       </section>
@@ -352,7 +353,7 @@ export default function HomePage() {
           </div>
           <div>
             <ButtonLink href="/for-eos" variant="on-green">
-              Where EOS stops, Prove goes deeper &rarr;
+              See what the Capacity box misses &rarr;
             </ButtonLink>
           </div>
         </Container>
@@ -386,7 +387,7 @@ export default function HomePage() {
           <div className="mb-10 text-center">
             <Eyebrow tone="soft">Why believe this</Eyebrow>
             <h2 className="mt-3.5 font-display text-[30px] font-bold tracking-[-.02em] sm:text-[40px]">
-              A 25-year track record of changing how people show up.
+              You&rsquo;ll be in hands that have done this for 25 years.
             </h2>
           </div>
           <div className="mb-10 grid grid-cols-1 gap-4 md:grid-cols-3">

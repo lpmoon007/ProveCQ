@@ -209,7 +209,7 @@ export default function EosGwcPage() {
               ))}
             </div>
             <p className="mx-auto mt-6 max-w-[760px] text-[15.5px] leading-[1.65] text-content-muted">
-              We go deep on this in{" "}
+              Go deeper on this in{" "}
               <Link href="/for-eos/capacity" className="font-semibold text-green underline underline-offset-2">
                 the Capacity problem
               </Link>{" "}

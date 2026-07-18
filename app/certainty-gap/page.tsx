@@ -51,8 +51,9 @@ export default function CertaintyGapPage() {
           <p className="m-0 mb-10 text-[18px] leading-[1.7] text-content-muted">
             Even the best leaders operate off gut instinct, inconsistent feedback,
             and reactive check-ins. In a volatile world, that guesswork becomes a
-            tax — a drag on speed, clarity, and confidence. We call the distance
-            between the decisions you must make and the proof you actually have{" "}
+            tax — a drag on speed, clarity, and confidence. The distance
+            between the decisions you must make and the proof you actually have
+            is{" "}
             <strong className="text-content">the Certainty Gap</strong>. And it
             costs more than you think.
           </p>
@@ -95,15 +96,15 @@ export default function CertaintyGapPage() {
               on proven stretch-readiness, and retain on proof rather than promise?
             </p>
             <p className="m-0 text-[17px] font-semibold leading-[1.65] text-paper">
-              That&rsquo;s what Prove does. It turns assumptions into visibility —
-              and visibility into velocity. When you know who&rsquo;s committed,
-              you stop guessing and start building.
+              That&rsquo;s what Prove gives you: assumptions become visibility,
+              and visibility becomes velocity. When you know who&rsquo;s
+              committed, you stop guessing and start building.
             </p>
           </div>
 
           <p className="m-0 mt-10 text-[20px] font-bold leading-[1.5]">
             This isn&rsquo;t a people problem. It&rsquo;s a signal problem.{" "}
-            <span className="text-green">Prove fixes that.</span>
+            <span className="text-green">One you can finally close.</span>
           </p>
         </Container>
       </Section>
