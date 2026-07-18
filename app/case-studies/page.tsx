@@ -26,7 +26,7 @@ export default function CaseStudiesPage() {
         }
       >
         Each of these shows the same arc: a specific leadership behavior created
-        a measurable operating constraint, we exposed the pattern, changed a
+        a measurable operating constraint, the leader saw the pattern, changed a
         limited set of behaviors, and the organization felt the difference in
         decisions, accountability, and execution.
       </PageHero>
