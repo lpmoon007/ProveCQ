@@ -51,6 +51,7 @@ export const footerCols = [
     title: "Learn",
     links: [
       { label: "Guides", href: "/guides" },
+      { label: "Founder bottleneck", href: "/founder-bottleneck" },
       { label: "FAQ", href: "/faq" },
       { label: "Glossary", href: "/glossary" },
       { label: "What CQ is & isn't", href: "/ethics" },

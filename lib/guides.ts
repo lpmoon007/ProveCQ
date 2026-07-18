@@ -31,6 +31,10 @@ export const GUIDE_ARTICLES: GuideRef[] = [
   { href: "/guides/regretted-attrition", title: "Regretted attrition: the number that matters" },
   { href: "/guides/reduce-turnover-small-business", title: "How to reduce turnover in a small business" },
   { href: "/guides/retain-top-performers", title: "How to keep your best people" },
+  { href: "/guides/work-on-vs-in-your-business", title: "Working on vs. in your business" },
+  { href: "/guides/how-to-let-go-as-a-founder", title: "How to let go as a founder" },
+  { href: "/guides/when-to-hire-a-second-in-command", title: "When to hire a second-in-command" },
+  { href: "/guides/founder-dependence", title: "Founder dependence & key-person risk" },
 ];
 
 /** EOS spoke pages under /for-eos — used by the More on EOS + Prove cross-links. */

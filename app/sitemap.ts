@@ -9,6 +9,7 @@ const ROUTES = [
   "",
   "/how-it-works",
   "/for-eos",
+  "/founder-bottleneck",
   "/certainty-gap",
   "/better-every-day",
   "/work-with-us",
@@ -70,6 +71,10 @@ const ROUTES = [
   "/guides/regretted-attrition",
   "/guides/reduce-turnover-small-business",
   "/guides/retain-top-performers",
+  "/guides/work-on-vs-in-your-business",
+  "/guides/how-to-let-go-as-a-founder",
+  "/guides/when-to-hire-a-second-in-command",
+  "/guides/founder-dependence",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
