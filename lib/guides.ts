@@ -37,6 +37,7 @@ export const GUIDE_ARTICLES: GuideRef[] = [
   { href: "/guides/founder-dependence", title: "Founder dependence & key-person risk" },
   { href: "/guides/leadership-style-clash", title: "Leadership styles & the CQ clash matrix" },
   { href: "/guides/behavioral-interview-questions", title: "Behavioral interview questions that predict follow-through" },
+  { href: "/guides/the-science-behind-cq", title: "The 5 behavioral traits that predict value at work" },
 ];
 
 /** EOS spoke pages under /for-eos — used by the More on EOS + Prove cross-links. */

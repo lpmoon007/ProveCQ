@@ -42,6 +42,7 @@ const GUIDES: { label: string; title: string; body: string; href: string; dark?:
   { label: "For EOS", title: "How to measure capacity in EOS", body: "Beyond the GWC yes/no checkbox.", href: "/guides/measure-capacity-in-eos" },
   { label: "For EOS", title: "Solving people issues in your Level 10 / IDS", body: "Stop re-listing the same people problem every week.", href: "/guides/eos-people-issues" },
   { label: "How it works", title: "Behavioral assessment vs. personality test", body: "The test drive beats the paper exam.", href: "/guides/behavioral-vs-personality-tests" },
+  { label: "Methodology", title: "The 5 behavioral traits that predict value at work", body: "The first-principles science behind the CQ score.", href: "/guides/the-science-behind-cq", dark: true },
   { label: "Point of view", title: "The problem isn't your people. It's the metric.", body: "Why engagement is the wrong measure — and what to track instead.", href: "/guides/its-the-metric", dark: true },
   { label: "Leadership", title: "Leadership styles & the CQ clash matrix", body: "How 9 styles fit or clash with your team's commitment.", href: "/guides/leadership-style-clash", dark: true },
   { label: "2026 report", title: "The 2026 State of Engagement", body: "The metric is broken. Here's the case for measuring commitment.", href: "/guides/state-of-engagement", dark: true },
