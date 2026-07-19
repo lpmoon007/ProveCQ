@@ -80,6 +80,14 @@ const TOOLS: {
     dark: true,
     href: "/guides/behavioral-interview-questions",
   },
+  {
+    label: "Free resource · hiring",
+    title: "The Hiring Scorecard",
+    body: "Score each candidate 1–5 on Initiative, Applied Grit, and Learnability with clear anchors — then check the number against your gut. Decide on evidence, not the last good impression.",
+    cta: "Get the scorecard",
+    dark: true,
+    href: "/guides/hiring-scorecard",
+  },
 ];
 
 export default function FreeToolsPage() {

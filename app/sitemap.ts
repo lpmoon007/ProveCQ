@@ -78,6 +78,7 @@ const ROUTES = [
   "/guides/leadership-style-clash",
   "/guides/behavioral-interview-questions",
   "/guides/the-science-behind-cq",
+  "/guides/hiring-scorecard",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
