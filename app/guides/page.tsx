@@ -24,6 +24,7 @@ const GUIDES: { label: string; title: string; body: string; href: string; dark?:
   { label: "Continuity", title: "Succession planning for small business", body: "Protect against key-person risk without a big HR team.", href: "/guides/succession-planning" },
   { label: "Hiring", title: "Hire people who actually follow through", body: "Screen for behavior, not charisma.", href: "/guides/hire-for-follow-through" },
   { label: "Hiring", title: "The real cost of a bad hire", body: "40–200% of salary — and how to avoid it.", href: "/guides/cost-of-a-bad-hire" },
+  { label: "Free resource", title: "Behavioral interview questions that predict follow-through", body: "17 questions, with the signals and red flags to listen for.", href: "/guides/behavioral-interview-questions", dark: true },
   { label: "Onboarding", title: "Use the first 90 days to prove a new hire", body: "Onboarding is your real interview.", href: "/guides/first-90-days" },
   { label: "Measurement", title: "How to measure employee commitment", body: "Behavior over self-report.", href: "/guides/measure-commitment" },
   { label: "Retention", title: "Signs an employee is quietly checking out", body: "Catch drift before it becomes turnover.", href: "/guides/quiet-quitting" },

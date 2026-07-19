@@ -72,6 +72,14 @@ const TOOLS: {
     dark: false,
     href: "/free-tools/scorecard",
   },
+  {
+    label: "Free resource · hiring",
+    title: "Behavioral Interview Questions",
+    body: "17 ready-to-use questions that predict follow-through — grouped by Initiative, Applied Grit, and Learnability, with the strong signals and red flags to listen for in each answer.",
+    cta: "Get the questions",
+    dark: true,
+    href: "/guides/behavioral-interview-questions",
+  },
 ];
 
 export default function FreeToolsPage() {

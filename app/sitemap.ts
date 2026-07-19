@@ -76,6 +76,7 @@ const ROUTES = [
   "/guides/when-to-hire-a-second-in-command",
   "/guides/founder-dependence",
   "/guides/leadership-style-clash",
+  "/guides/behavioral-interview-questions",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
