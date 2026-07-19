@@ -39,6 +39,7 @@ export const GUIDE_ARTICLES: GuideRef[] = [
   { href: "/guides/behavioral-interview-questions", title: "Behavioral interview questions that predict follow-through" },
   { href: "/guides/the-science-behind-cq", title: "The 5 behavioral traits that predict value at work" },
   { href: "/guides/hiring-scorecard", title: "The hiring scorecard: score a behavioral interview" },
+  { href: "/guides/high-performer-vs-high-potential", title: "High performer vs. high potential vs. high commitment" },
 ];
 
 /** EOS spoke pages under /for-eos — used by the More on EOS + Prove cross-links. */

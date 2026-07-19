@@ -79,6 +79,7 @@ const ROUTES = [
   "/guides/behavioral-interview-questions",
   "/guides/the-science-behind-cq",
   "/guides/hiring-scorecard",
+  "/guides/high-performer-vs-high-potential",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -20,6 +20,7 @@ const GUIDES: { label: string; title: string; body: string; href: string; dark?:
   { label: "Promotions", title: "Why good employees fail after a promotion", body: "It is a capacity mismatch, not a character flaw.", href: "/guides/failed-promotion" },
   { label: "People decisions", title: "Promote from within, or hire outside?", body: "Let proof break the tie.", href: "/guides/promote-vs-hire" },
   { label: "Talent", title: "How to identify high-potential employees", body: "Potential is behavior, not this quarter's numbers.", href: "/guides/high-potential-employees" },
+  { label: "Talent", title: "High performer vs. high potential vs. high commitment", body: "The three 'highs' leaders confuse — and the one that predicts.", href: "/guides/high-performer-vs-high-potential" },
   { label: "Scaling", title: "Build a leadership bench before you need it", body: "Grow your next layer ahead of the crunch.", href: "/guides/leadership-bench" },
   { label: "Continuity", title: "Succession planning for small business", body: "Protect against key-person risk without a big HR team.", href: "/guides/succession-planning" },
   { label: "Hiring", title: "Hire people who actually follow through", body: "Screen for behavior, not charisma.", href: "/guides/hire-for-follow-through" },
