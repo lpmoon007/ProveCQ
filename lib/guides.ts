@@ -40,6 +40,7 @@ export const GUIDE_ARTICLES: GuideRef[] = [
   { href: "/guides/the-science-behind-cq", title: "The 5 behavioral traits that predict value at work" },
   { href: "/guides/hiring-scorecard", title: "The hiring scorecard: score a behavioral interview" },
   { href: "/guides/high-performer-vs-high-potential", title: "High performer vs. high potential vs. high commitment" },
+  { href: "/guides/people-decisions-by-the-numbers", title: "People decisions by the numbers: what the research says" },
 ];
 
 /** EOS spoke pages under /for-eos — used by the More on EOS + Prove cross-links. */

@@ -36,22 +36,22 @@ const STATS = [
     ),
   },
   {
-    n: "60%",
+    n: "70%",
     color: "text-[#E5674C]",
     body: (
       <>
-        of new managers fail within 24 months.{" "}
-        <span className="text-[#6E6A5C]">(DDI)</span>
+        of the variance in a team&rsquo;s engagement traces to its manager.{" "}
+        <span className="text-[#6E6A5C]">(Gallup)</span>
       </>
     ),
   },
   {
-    n: "68%",
+    n: "11%",
     color: "text-[#E5674C]",
     body: (
       <>
-        of SMBs promote on past performance alone.{" "}
-        <span className="text-[#6E6A5C]">(SHRM)</span>
+        of executives say their leadership-development programs achieve lasting
+        results. <span className="text-[#6E6A5C]">(McKinsey)</span>
       </>
     ),
   },
@@ -149,10 +149,10 @@ export default function StateOfEngagementPage() {
           </h2>
           <p className="m-0 mb-4 text-[18px] leading-[1.7] text-[#3A362C]">
             Large companies can absorb a mis-hire or a stalled team. A
-            75&ndash;200-person company cannot. When most SMBs hand over
-            responsibility based on past performance, and a majority of new
-            managers fail inside two years, the cost isn&rsquo;t a lower survey
-            score &mdash; it&rsquo;s a six-figure mistake, a lost quiet-performer,
+            75&ndash;200-person company cannot. When responsibility gets handed
+            over on past performance alone &mdash; and the new role demands
+            behavior the old one never tested &mdash; the cost isn&rsquo;t a lower
+            survey score. It&rsquo;s a six-figure mistake, a lost quiet-performer,
             and a founder pulled back into the weeds. Engagement dashboards
             don&rsquo;t catch any of that in time.
           </p>
@@ -230,16 +230,14 @@ export default function StateOfEngagementPage() {
               attributable to the manager.
             </li>
             <li>
-              DDI, <em>Leadership Transitions Report.</em> ~60% of new managers
-              underperform or fail within their first 24 months.
+              Gallup. <em>State of the American Manager.</em> Managers account
+              for ~70% of the variance in team engagement.
             </li>
             <li>
-              SHRM (2022). ~68% of small businesses assign responsibility based
-              primarily on past performance.
-            </li>
-            <li>
-              Founder Institute (2022). Founders cite &ldquo;knowing who to
-              trust&rdquo; as a top barrier to leadership decisions.
+              Gurdjian, P., Halbeisen, T. &amp; Lane, K. (2014). <em>Why
+              leadership-development programs fail.</em> McKinsey &amp; Company.
+              Only ~11% of executives strongly agree their programs achieve
+              lasting results.
             </li>
             <li>
               Simpplr / industry analysis (2025). The &ldquo;engagement

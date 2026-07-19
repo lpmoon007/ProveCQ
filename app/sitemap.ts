@@ -80,6 +80,7 @@ const ROUTES = [
   "/guides/the-science-behind-cq",
   "/guides/hiring-scorecard",
   "/guides/high-performer-vs-high-potential",
+  "/guides/people-decisions-by-the-numbers",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

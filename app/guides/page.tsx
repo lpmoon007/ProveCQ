@@ -48,6 +48,7 @@ const GUIDES: { label: string; title: string; body: string; href: string; dark?:
   { label: "Point of view", title: "The problem isn't your people. It's the metric.", body: "Why engagement is the wrong measure — and what to track instead.", href: "/guides/its-the-metric", dark: true },
   { label: "Leadership", title: "Leadership styles & the CQ clash matrix", body: "How 9 styles fit or clash with your team's commitment.", href: "/guides/leadership-style-clash", dark: true },
   { label: "2026 report", title: "The 2026 State of Engagement", body: "The metric is broken. Here's the case for measuring commitment.", href: "/guides/state-of-engagement", dark: true },
+  { label: "The research", title: "People decisions by the numbers", body: "What the data says about how often people bets fail — and the cost.", href: "/guides/people-decisions-by-the-numbers", dark: true },
   { label: "Free tool", title: "The Certainty Diagnostic", body: "2 minutes: how much are you guessing about your people?", href: "/free-tools/certainty-diagnostic" },
   { label: "Free tool", title: "The 4 AM Test", body: "Will they deliver — or will you wake up wondering?", href: "/free-tools/4am-test" },
   { label: "Free tool", title: "Get to Green", body: "The full 146-point people-systems readiness map.", href: "/free-tools/get-to-green" },
