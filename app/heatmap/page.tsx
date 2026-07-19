@@ -16,6 +16,7 @@ export default function HeatmapPage() {
     <div className="min-h-screen bg-ink text-paper on-dark">
       <Nav minimal />
 
+      <main>
       <section className="mx-auto max-w-[1120px] px-5 pb-5 pt-12 sm:px-8">
         <div className="mb-3.5 text-[13px] font-semibold text-content-faint">
           <Link href="/" className="text-content-faint hover:text-paper">
@@ -47,6 +48,7 @@ export default function HeatmapPage() {
           </a>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>
