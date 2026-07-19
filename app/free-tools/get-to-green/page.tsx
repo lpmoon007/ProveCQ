@@ -48,6 +48,7 @@ export default function GetToGreenPage() {
       />
       <Nav minimal />
 
+      <main>
       <section className="mx-auto max-w-[1120px] px-5 pb-[18px] pt-12 sm:px-8">
         <div className="mb-3.5 text-[13px] font-semibold text-[#7C7767]">
           <Link href="/" className="text-[#7C7767] hover:text-paper">
@@ -109,6 +110,7 @@ export default function GetToGreenPage() {
           </div>
         </div>
       </section>
+      </main>
 
       <MoreFreeTools current="/free-tools/get-to-green" />
       <Footer />
