@@ -29,6 +29,7 @@ const ROUTES = [
   "/free-tools/scorecard",
   "/free-tools/cost-of-a-bad-bet",
   "/free-tools/get-to-green",
+  "/free-tools/interview-kit",
   // EOS spokes
   "/for-eos/capacity",
   "/for-eos/gwc",

@@ -216,6 +216,11 @@ export default function HiringScorecardPage() {
             </Link>{" "}
             &mdash; ask for a specific example, then score the answer against the
             anchors below. Rate each trait as you go, while the example is fresh.
+            Want to do it on screen?{" "}
+            <Link href="/free-tools/interview-kit" className="font-semibold text-green">
+              The interactive CQ Interview Kit
+            </Link>{" "}
+            runs the questions and totals the score for you.
           </p>
         </Container>
       </Section>

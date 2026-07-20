@@ -25,6 +25,14 @@ const TOOLS: {
   href: string;
 }[] = [
   {
+    label: "Interactive · hiring",
+    title: "The CQ Interview Kit",
+    body: "Run a behavioral interview and score it live: 18 questions grouped by Initiative, Applied Grit, and Learnability, each with what to listen for and the red flags — plus an instant CQ read on the candidate.",
+    cta: "Open the interview kit",
+    dark: true,
+    href: "/free-tools/interview-kit",
+  },
+  {
     label: "2 minutes · instant",
     title: "The Certainty Diagnostic",
     body: "Ten quick questions, one honest number: how much proof (versus gut feel) is behind your hiring, promotion, and retention calls. Instant Certainty Score.",

@@ -65,6 +65,7 @@ export const FREE_TOOLS: GuideRef[] = [
   { href: "/free-tools/get-to-green", title: "Get to Green" },
   { href: "/free-tools/cost-of-a-bad-bet", title: "Cost of a Bad Bet" },
   { href: "/free-tools/scorecard", title: "Talent Development Scorecard" },
+  { href: "/free-tools/interview-kit", title: "The CQ Interview Kit" },
 ];
 
 /** Case-study detail pages — used by the More Case Studies cross-links. */

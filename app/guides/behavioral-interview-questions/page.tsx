@@ -253,7 +253,11 @@ export default function BehavioralInterviewQuestionsPage() {
           <p className="m-0 mb-6 text-[17px] leading-[1.65] text-content-muted">
             Behavioral questions only work if you push past the first answer.
             Four rules make the difference between a real read and a rehearsed
-            one:
+            one. (Prefer to score as you go?{" "}
+            <Link href="/free-tools/interview-kit" className="font-semibold text-green">
+              Run the interactive CQ Interview Kit
+            </Link>{" "}
+            &mdash; the same questions with live 1&ndash;5 scoring.)
           </p>
           <ol className="m-0 flex list-none flex-col gap-3 p-0">
             {RUN_STEPS.map((s, i) => (
