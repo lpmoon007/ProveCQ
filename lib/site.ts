@@ -15,6 +15,8 @@ export const site = {
   telephone: "+1-800-513-8759",
   // Google Analytics 4 (gtag.js) measurement ID.
   gaMeasurementId: "G-1PRV1QWGHF",
+  // Microsoft Clarity project ID (session recordings + heatmaps).
+  clarityProjectId: "xp70d5yroz",
 } as const;
 
 /** Primary nav (dark header). */
