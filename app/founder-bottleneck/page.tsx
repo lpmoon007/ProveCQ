@@ -203,6 +203,11 @@ export default function FounderBottleneckPage() {
               clearly see who will actually follow through when it gets hard. So
               you stay the safety net, because being the safety net feels less
               risky than betting on the wrong person and finding out too late.
+              It&rsquo;s one of{" "}
+              <Link href="/guides/founder-people-decisions" className="font-semibold text-green">
+                the five people decisions that keep founders up at night
+              </Link>
+              .
             </p>
             <p className="m-0 text-[17px] leading-[1.7] text-content-muted">
               That&rsquo;s the real unlock. When you can see &mdash; from real

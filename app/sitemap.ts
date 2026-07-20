@@ -82,6 +82,7 @@ const ROUTES = [
   "/guides/hiring-scorecard",
   "/guides/high-performer-vs-high-potential",
   "/guides/people-decisions-by-the-numbers",
+  "/guides/founder-people-decisions",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

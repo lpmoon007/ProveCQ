@@ -35,6 +35,7 @@ export const GUIDE_ARTICLES: GuideRef[] = [
   { href: "/guides/how-to-let-go-as-a-founder", title: "How to let go as a founder" },
   { href: "/guides/when-to-hire-a-second-in-command", title: "When to hire a second-in-command" },
   { href: "/guides/founder-dependence", title: "Founder dependence & key-person risk" },
+  { href: "/guides/founder-people-decisions", title: "The 5 people decisions that keep founders up at night" },
   { href: "/guides/leadership-styles", title: "The 9 leadership styles, with examples" },
   { href: "/guides/leadership-style-clash", title: "Leadership styles & the CQ clash matrix" },
   { href: "/guides/behavioral-interview-questions", title: "Behavioral interview questions that predict follow-through" },

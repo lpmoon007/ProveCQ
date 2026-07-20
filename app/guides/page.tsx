@@ -37,6 +37,7 @@ const GUIDES: { label: string; title: string; body: string; href: string; dark?:
   { label: "Retention", title: "How to keep your best people", body: "Your top performers leave for different reasons than the rest.", href: "/guides/retain-top-performers" },
   { label: "Founder leverage", title: "How to delegate with confidence", body: "Stop being the bottleneck.", href: "/guides/how-to-delegate" },
   { label: "Founder leverage", title: "Escape the founder bottleneck", body: "You're the blocker. Here's the way out.", href: "/founder-bottleneck", dark: true },
+  { label: "For founders", title: "The 5 people decisions that keep founders up", body: "The calls you lose sleep over — and what actually resolves each.", href: "/guides/founder-people-decisions", dark: true },
   { label: "Founder leverage", title: "Working on vs. in your business", body: "Build the systems so the work runs without you.", href: "/guides/work-on-vs-in-your-business" },
   { label: "Founder leverage", title: "How to let go as a founder", body: "It's a confidence problem, not a control problem.", href: "/guides/how-to-let-go-as-a-founder" },
   { label: "Founder leverage", title: "When to hire a second-in-command", body: "The wrong #2 is worse than none — prove it first.", href: "/guides/when-to-hire-a-second-in-command" },
