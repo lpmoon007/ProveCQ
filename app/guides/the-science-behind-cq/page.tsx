@@ -352,7 +352,11 @@ export default function ScienceBehindCQPage() {
             <Link href="/how-it-works" className="font-semibold text-green">
               a Prove cycle
             </Link>{" "}
-            rest on the same first-principles behaviors.
+            rest on the same first-principles behaviors. Each of the{" "}
+            <Link href="/glossary" className="font-semibold text-green">
+              nine sub-traits is defined in plain English in the glossary
+            </Link>
+            .
           </p>
         </Container>
       </Section>

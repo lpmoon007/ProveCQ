@@ -60,8 +60,8 @@ const ROWS: { dim: string; a: string; b: string; c: string }[] = [
   { dim: "Coachability", a: "May resist feedback that threatens performance", b: "Open to feedback that fits their plan", c: "Craves feedback to grow faster" },
   { dim: "Learning behavior", a: "Learns when necessary", b: "Learns when guided", c: "Actively learns without permission" },
   { dim: "Risk tolerance", a: "Avoids failure; protects the track record", b: "Selective — tries when the payoff is high", c: "Leans into growth even when it's messy" },
-  { dim: "Initiative", a: "Executes tasks assigned", b: "Waits to be recognized", c: "Creates opportunities and acts without waiting" },
-  { dim: "Ownership", a: "Delivers when expected", b: "Takes credit when successful", c: "Owns outcomes, even when messy or shared" },
+  { dim: "Initiative", a: "Executes tasks assigned", b: "Acts, but aimed at getting noticed", c: "Creates opportunities and acts without waiting" },
+  { dim: "Ownership", a: "Delivers when expected", b: "Owns the wins more than the misses", c: "Owns outcomes, even when messy or shared" },
   { dim: "Loyalty", a: "Loyal to outcomes", b: "Loyal to their career trajectory", c: "Loyal to growth — of self, team, and mission" },
   { dim: "What they need", a: "Clear goals and rewards", b: "Mentorship and a development plan", c: "A mission and the space to grow" },
   { dim: "Risk to the company", a: "May plateau or burn out", b: "May never realize the potential", c: "Will find a way to grow — here or elsewhere" },
@@ -207,9 +207,13 @@ export default function HighsPage() {
               </tbody>
             </table>
           </div>
-          <p className="mt-3 text-[12.5px] text-content-faint">
+          <p className="mt-3 text-[13px] leading-[1.55] text-content-faint">
             Read across each row. The three look alike on a good day; the
-            differences only show up under pressure and over time.
+            differences only show up under pressure and over time. None of the
+            three is a &ldquo;bad&rdquo; employee &mdash; a high performer and a
+            genuine high-potential are both real assets. The claim is narrower:
+            for a bigger, more ambiguous role, commitment is the trait that
+            predicts who carries it.
           </p>
         </Container>
       </Section>
@@ -228,9 +232,9 @@ export default function HighsPage() {
             </Link>{" "}
             in action. Confusing polish for potential is how a confident
             self-promoter gets the stretch role while a quieter, hungrier person{" "}
-            &mdash; often your real{" "}
+            &mdash; whose{" "}
             <Link href="/guides/high-potential-employees" className="font-semibold text-green">
-              high-potential
+              potential is real but doesn&rsquo;t announce itself
             </Link>{" "}
             &mdash; gets passed over.
           </p>

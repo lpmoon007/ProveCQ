@@ -152,7 +152,12 @@ export default function WhoToPromotePage() {
               accurate about where they have been, silent about where they are
               going. The next role almost always demands different behavior:
               setting direction instead of taking it, owning outcomes instead of
-              tasks, and staying steady when the path is unclear.
+              tasks, and staying steady when the path is unclear. (This is also why
+              it pays to separate{" "}
+              <Link href="/guides/high-performer-vs-high-potential" className="font-semibold text-green">
+                a high performer from a high potential from a high-commitment player
+              </Link>{" "}
+              before you decide.)
             </p>
             <p className="m-0 mb-4 text-[17px] leading-[1.65] text-content-muted">
               Knowing who to promote, then, means reading the behaviors that

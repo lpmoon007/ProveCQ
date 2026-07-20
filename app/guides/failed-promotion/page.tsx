@@ -156,7 +156,12 @@ export default function FailedPromotionPage() {
               more ambiguous one. The two can diverge sharply &mdash; some of your
               most valuable people are happiest and strongest exactly where they
               are, and moving them &ldquo;up&rdquo; costs you a great contributor
-              to gain a struggling manager.
+              to gain a struggling manager. It helps to be clear on which you&rsquo;re
+              actually betting on &mdash;{" "}
+              <Link href="/guides/high-performer-vs-high-potential" className="font-semibold text-green">
+                a high performer, a high potential, or a high-commitment player
+              </Link>
+              .
             </p>
             <p className="m-0 text-[17px] leading-[1.65] text-content-muted">
               The failure is also predictable, which means it is preventable. If

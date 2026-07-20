@@ -158,10 +158,14 @@ export default function CostOfABadHirePage() {
             </p>
             <p className="m-0 text-[17px] leading-[1.65] text-content-muted">
               Most bad hires trace back to the same root cause: the decision was
-              made on the wrong evidence. Resumes show credentials and interviews
-              reward people who present well under rehearsed conditions, but
-              neither reliably predicts whether someone will follow through once
-              the novelty wears off. The fix is not a better gut feel &mdash; it is
+              made on the wrong evidence &mdash; the same failure that shows up in{" "}
+              <Link href="/guides/people-decisions-by-the-numbers" className="font-semibold text-green hover:underline">
+                the numbers behind bad people bets
+              </Link>
+              . Resumes show credentials and interviews reward people who present
+              well under rehearsed conditions, but neither reliably predicts
+              whether someone will follow through once the novelty wears off. The
+              fix is not a better gut feel &mdash; it is
               to prove the behavior before you commit, so you learn how someone
               actually works while the cost of being wrong is still small. The same
               logic applies to internal moves, where a{" "}
