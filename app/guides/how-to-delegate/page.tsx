@@ -164,7 +164,11 @@ export default function DelegateGuidePage() {
               Real delegation moves ownership: the person carries the goal, makes
               the calls, and comes back with the result. Confidence is simply
               knowing, before you transfer that ownership, that the person can
-              hold it.
+              hold it &mdash; and handing it off in{" "}
+              <Link href="/guides/leadership-styles" className="font-semibold text-green">
+                the style that fits the person catching it
+              </Link>
+              , not the one that suits you.
             </p>
             <p className="m-0 mb-4 text-[17px] leading-[1.65] text-content-muted">
               That confidence is almost never a feeling you can talk yourself

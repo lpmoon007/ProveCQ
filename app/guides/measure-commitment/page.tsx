@@ -156,7 +156,12 @@ export default function MeasureCommitmentGuidePage() {
               Commitment is not enthusiasm and it is not tenure. It is a pattern of
               behavior: the tendency to take initiative without being told, to keep
               going when the work turns hard, and to keep adapting as the demands
-              change. Because it lives in what people do rather than how they feel,
+              change &mdash; the{" "}
+              <Link href="/glossary" className="font-semibold text-green">
+                commitment, capacity, and behavioral terms behind it are defined
+                here
+              </Link>
+              . Because it lives in what people do rather than how they feel,
               it cannot be captured by asking &mdash; only by observing. That single
               distinction is why most measurement of commitment fails: it reaches
               for a survey when the thing it wants to know is behavioral.

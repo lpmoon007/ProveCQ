@@ -148,8 +148,13 @@ export default function PromoteVsHirePage() {
               spends months rebuilding. But tenure is not proof. The most common
               internal-promotion failure is rewarding someone&rsquo;s excellence at
               their current job with a different job they were never shown to be
-              good at &mdash; the Peter Principle in action. Your strongest
-              individual contributor is not automatically your strongest manager,
+              good at &mdash; the Peter Principle in action, and why it pays to know
+              whether your insider is{" "}
+              <Link href="/guides/high-performer-vs-high-potential" className="font-semibold text-green">
+                a high performer, a high potential, or a high-commitment player
+              </Link>
+              . Your strongest individual contributor is not automatically your
+              strongest manager,
               because the two roles reward different behavior.
             </p>
             <p className="m-0 text-[17px] leading-[1.65] text-content-muted">

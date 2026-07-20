@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { RelatedGuides } from "@/components/RelatedLinks";
@@ -26,12 +27,12 @@ const STATS = [
     ),
   },
   {
-    n: "$10T",
+    n: "$8.9T",
     color: "text-[#8FD6AC]",
     body: (
       <>
         estimated annual cost of low engagement &mdash; about 9% of global GDP.{" "}
-        <span className="text-[#6E6A5C]">(Gallup, 2026)</span>
+        <span className="text-[#6E6A5C]">(Gallup)</span>
       </>
     ),
   },
@@ -141,7 +142,15 @@ export default function StateOfEngagementPage() {
             calling it the &ldquo;engagement paradox.&rdquo; If the metric were
             capturing what actually drives results, that gap couldn&rsquo;t
             persist. It can &mdash; because the metric and the outcome were never
-            the same thing.
+            the same thing. (We make that case in full in{" "}
+            <Link href="/guides/its-the-metric" className="font-semibold text-green">
+              the problem isn&rsquo;t your people, it&rsquo;s the metric
+            </Link>{" "}
+            and{" "}
+            <Link href="/guides/cq-vs-engagement-surveys" className="font-semibold text-green">
+              CQ vs. engagement surveys
+            </Link>
+            .)
           </p>
 
           <h2 className="mb-4 mt-10 font-display text-[32px] font-bold tracking-[-.02em]">
@@ -191,9 +200,12 @@ export default function StateOfEngagementPage() {
           </div>
           <p className="m-0 mb-4 text-[18px] leading-[1.7] text-[#3A362C]">
             Behavior is harder to fake than a survey response, and it&rsquo;s the
-            thing that actually predicts who you can bet on. Measuring it &mdash;
-            over time, under real pressure &mdash; is what the Commitment Quotient
-            does.
+            thing that actually predicts who you can bet on.{" "}
+            <Link href="/guides/measure-commitment" className="font-semibold text-green">
+              Measuring it
+            </Link>{" "}
+            &mdash; over time, under real pressure &mdash; is what the Commitment
+            Quotient does.
           </p>
 
           <h2 className="mb-4 mt-10 font-display text-[32px] font-bold tracking-[-.02em]">
@@ -219,7 +231,7 @@ export default function StateOfEngagementPage() {
             <li>
               Gallup. <em>State of the Global Workplace: 2026 Report.</em> Global
               engagement 20% in 2025 (down from 23% in 2022); low engagement costs
-              ~$10 trillion, about 9% of global GDP; manager engagement fell from
+              ~$8.9 trillion, about 9% of global GDP; manager engagement fell from
               27% to 22%.
             </li>
             <li>
@@ -234,10 +246,10 @@ export default function StateOfEngagementPage() {
               for ~70% of the variance in team engagement.
             </li>
             <li>
-              Gurdjian, P., Halbeisen, T. &amp; Lane, K. (2014). <em>Why
-              leadership-development programs fail.</em> McKinsey &amp; Company.
-              Only ~11% of executives strongly agree their programs achieve
-              lasting results.
+              McKinsey &amp; Company (2016). <em>What&rsquo;s missing in
+              leadership development?</em> Only ~11% of 500+ executives polled
+              strongly agreed their leadership-development programs achieve and
+              sustain the desired results.
             </li>
             <li>
               Simpplr / industry analysis (2025). The &ldquo;engagement

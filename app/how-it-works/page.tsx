@@ -123,7 +123,12 @@ export default function HowItWorksPage() {
             </h2>
             <p className="mx-auto mt-3 max-w-[600px] text-[16px] leading-[1.6] text-content-muted">
               Three observable behaviors, weighted into a single score you can act
-              on &mdash; measured from what people do, not what they say.
+              on &mdash; measured from what people do, not what they say. New to
+              the terms?{" "}
+              <Link href="/glossary" className="font-semibold text-green">
+                Start with the glossary
+              </Link>
+              .
             </p>
           </div>
           <CQDiagram />

@@ -186,7 +186,11 @@ export default function RegrettedAttritionPage() {
               underneath it. The average looks fine. The reality is that the
               people carrying your hardest work are the ones walking out, and the
               blended number gives you no way to see it. You cannot manage what
-              you refuse to separate.
+              you refuse to separate &mdash; and{" "}
+              <Link href="/guides/people-decisions-by-the-numbers" className="font-semibold text-green hover:underline">
+                the research says as much as 75% of that loss is preventable
+              </Link>
+              .
             </p>
             <p className="m-0 text-[17px] leading-[1.65] text-content-muted">
               Splitting the two changes what you pay attention to. A rising

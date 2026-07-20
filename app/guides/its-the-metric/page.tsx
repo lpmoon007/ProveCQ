@@ -3,6 +3,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { RelatedGuides } from "@/components/RelatedLinks";
 import { Container, Eyebrow, Section, ButtonLink } from "@/components/ui";
+import Link from "next/link";
 import { PageHero } from "@/components/PageParts";
 import { ArticleMeta } from "@/components/ArticleMeta";
 import { site } from "@/lib/site";
@@ -83,7 +84,15 @@ export default function ItsTheMetricPage() {
             is misaligned with how value is actually created. It rewards charisma
             over consistency, visibility over value, energy over execution &mdash;
             and it insults the quiet top performers solving real problems without
-            broadcasting them.
+            broadcasting them. It&rsquo;s a pattern the data backs up &mdash; see{" "}
+            <Link href="/guides/people-decisions-by-the-numbers" className="font-semibold text-green">
+              what the research says people decisions really cost
+            </Link>{" "}
+            and the fuller case in the{" "}
+            <Link href="/guides/state-of-engagement" className="font-semibold text-green">
+              2026 State of Engagement
+            </Link>{" "}
+            report.
           </p>
 
           <div className="my-9 rounded-[18px] bg-ink px-[34px] py-[30px] text-paper on-dark">
@@ -154,8 +163,11 @@ export default function ItsTheMetricPage() {
               Where this goes next
             </div>
             <p className="m-0 text-[18px] leading-[1.65] text-[#2A261D]">
-              Performance is a terrible predictor of leadership. So is
-              &ldquo;potential&rdquo; &mdash; a gut feel that only pays off if the
+              Performance is a terrible predictor of leadership. So is{" "}
+              <Link href="/guides/high-performer-vs-high-potential" className="font-semibold text-green">
+                &ldquo;potential&rdquo;
+              </Link>{" "}
+              &mdash; a gut feel that only pays off if the
               stars align and the coaching, mentoring, and support are all there,
               which in a small business they rarely are. There is no test for how
               someone leads until you put them in the role.{" "}

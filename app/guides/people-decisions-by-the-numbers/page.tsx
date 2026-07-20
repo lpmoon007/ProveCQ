@@ -326,10 +326,22 @@ export default function PeopleDecisionsByTheNumbersPage() {
             <li>
               Gurdjian, P., Halbeisen, T. &amp; Lane, K. (2014). <em>Why
               leadership-development programs fail.</em> McKinsey &amp; Company.
-              Only 11% of executives strongly agree their programs achieve lasting
-              results; U.S. spend ~$14B/year.{" "}
+              U.S. companies spend ~$14B/year on leadership development.{" "}
               <a
                 href="https://www.mckinsey.com/featured-insights/leadership/why-leadership-development-programs-fail"
+                target="_blank"
+                rel="noopener nofollow"
+              >
+                mckinsey.com
+              </a>
+            </li>
+            <li>
+              McKinsey &amp; Company (2016). <em>What&rsquo;s missing in
+              leadership development?</em> Only 11% of 500+ executives polled
+              strongly agreed their leadership-development programs achieve and
+              sustain the desired results.{" "}
+              <a
+                href="https://www.mckinsey.com/featured-insights/leadership/whats-missing-in-leadership-development"
                 target="_blank"
                 rel="noopener nofollow"
               >

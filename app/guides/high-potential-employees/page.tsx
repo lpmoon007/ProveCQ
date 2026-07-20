@@ -187,10 +187,14 @@ export default function HighPotentialEmployeesPage() {
             </h2>
             <p className="m-0 mb-6 text-[17px] leading-[1.65] text-content-muted">
               A high-potential employee is someone with the capacity to grow into a
-              larger or more ambiguous role. In practice, identifying
-              high-potential people means watching for a consistent pattern of
-              behavior rather than a single strong quarter. The characteristics
-              show up as a checklist:
+              larger or more ambiguous role &mdash; which is not the same as{" "}
+              <Link href="/guides/high-performer-vs-high-potential" className="font-semibold text-green">
+                a high performer or a high-commitment player
+              </Link>
+              , and confusing the three is how the wrong person gets the stretch
+              role. In practice, identifying high-potential people means watching
+              for a consistent pattern of behavior rather than a single strong
+              quarter. The characteristics show up as a checklist:
             </p>
             <ul className="m-0 flex list-none flex-col gap-3 p-0">
               {CHARACTERISTICS.map((c) => (

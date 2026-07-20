@@ -184,8 +184,13 @@ export default function CostOfTurnoverPage() {
             <p className="m-0 mb-5 text-[17px] leading-[1.65] text-content-muted">
               A widely-cited estimate puts the cost of replacing an employee at
               roughly one-half to two times their annual salary, depending on the
-              role &mdash; higher for senior, specialized, or hard-to-fill jobs.
-              Take it as a range for sizing the problem, not a precise fact. The
+              role &mdash; higher for senior, specialized, or hard-to-fill jobs
+              (the{" "}
+              <Link href="/guides/people-decisions-by-the-numbers" className="font-semibold text-green hover:underline">
+                research behind that range
+              </Link>{" "}
+              puts it at ~20% of salary for most roles, up to 213% for senior
+              ones). Take it as a range for sizing the problem, not a precise fact. The
               instinct that a departure &ldquo;saves&rdquo; a salary is the
               expensive mistake. You stop paying one person, but the work they did
               does not disappear. It gets deferred, dropped, or dumped on teammates
