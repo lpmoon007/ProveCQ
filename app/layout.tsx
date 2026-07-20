@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Space_Grotesk, Figtree } from "next/font/google";
 import Analytics from "@/components/Analytics";
+import Clarity from "@/components/Clarity";
 import StickyCTA from "@/components/StickyCTA";
 import ConsentBanner from "@/components/ConsentBanner";
 import { site } from "@/lib/site";
@@ -102,6 +103,7 @@ gtag('js', new Date());
 gtag('config', '${site.gaMeasurementId}');`}
         </Script>
         <Analytics />
+        <Clarity />
         {children}
         <StickyCTA />
         <ConsentBanner />
