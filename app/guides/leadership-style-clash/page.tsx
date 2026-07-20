@@ -364,7 +364,11 @@ export default function LeadershipStyleClashPage() {
             That&rsquo;s why the matrix below reads high <em>and</em> low for every
             trait &mdash; the risk is almost never the style or the person alone.
             It&rsquo;s the <strong>mismatch</strong> between them. Read your own
-            default style, then read your people.
+            default style, then read your people. (New here? Start with the{" "}
+            <Link href="/guides/leadership-styles" className="font-semibold text-green">
+              9 leadership styles explained, with examples
+            </Link>
+            .)
           </p>
         </Container>
       </Section>

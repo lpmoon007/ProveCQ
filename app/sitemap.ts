@@ -75,6 +75,7 @@ const ROUTES = [
   "/guides/how-to-let-go-as-a-founder",
   "/guides/when-to-hire-a-second-in-command",
   "/guides/founder-dependence",
+  "/guides/leadership-styles",
   "/guides/leadership-style-clash",
   "/guides/behavioral-interview-questions",
   "/guides/the-science-behind-cq",
