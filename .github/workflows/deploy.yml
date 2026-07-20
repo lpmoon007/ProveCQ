@@ -51,3 +51,39 @@ jobs:
             -e "ssh -i ~/.ssh/deploy_key -p $PORT -o StrictHostKeyChecking=accept-new" \
             out/ "$DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH/"
           echo "Deployed to $DEPLOY_HOST:$DEPLOY_PATH"
+
+      - name: Notify IndexNow (Bing / Yandex / Seznam / Naver)
+        # Runs only after a real deploy — the key file is live by now, so
+        # IndexNow can verify it. Submits every URL in the freshly-built
+        # sitemap. Non-fatal: a failed ping never fails the deploy.
+        env:
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+        run: |
+          if [ -z "$DEPLOY_SSH_KEY" ]; then
+            echo "No deploy happened — skipping IndexNow ping."
+            exit 0
+          fi
+          python3 - <<'PY'
+          import re, json, urllib.request
+          key = "473796a8f45a8b1b58e0039f8c942eff"
+          host = "provecq.com"
+          with open("out/sitemap.xml", encoding="utf-8") as f:
+              urls = re.findall(r"<loc>(.*?)</loc>", f.read())
+          body = {
+              "host": host,
+              "key": key,
+              "keyLocation": f"https://{host}/{key}.txt",
+              "urlList": urls,
+          }
+          req = urllib.request.Request(
+              "https://api.indexnow.org/IndexNow",
+              data=json.dumps(body).encode("utf-8"),
+              headers={"Content-Type": "application/json; charset=utf-8"},
+              method="POST",
+          )
+          try:
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  print(f"IndexNow: HTTP {r.status} — submitted {len(urls)} URLs")
+          except Exception as e:
+              print(f"::warning::IndexNow ping failed (non-fatal): {e}")
+          PY
