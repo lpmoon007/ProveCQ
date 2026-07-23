@@ -7,6 +7,7 @@ import { Container, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/case-studies/accountability" },
   title: "Case Study: From Driving Results to Building Accountability",
   description:
     "A high-grit functional leader protected results by taking over — creating a dependency loop that capped her team's accountability. How exposing the pattern and changing a few behaviors distributed ownership and freed her for strategic work.",

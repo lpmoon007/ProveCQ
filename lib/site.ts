@@ -17,6 +17,13 @@ export const site = {
   gaMeasurementId: "G-1PRV1QWGHF",
   // Microsoft Clarity project ID (session recordings + heatmaps).
   clarityProjectId: "xp70d5yroz",
+  /**
+   * Public profiles that refer to the SAME organization — feeds schema `sameAs`
+   * so a model can tell this "Prove" (the CQ assessment) apart from prove.com
+   * (identity verification). Add confirmed URLs ONLY — a 404 here hurts more
+   * than an omission. TODO: add LinkedIn company page + Crunchbase once confirmed.
+   */
+  orgSameAs: ["https://www.belegendary.org"] as string[],
 } as const;
 
 /** Primary nav (dark header). */

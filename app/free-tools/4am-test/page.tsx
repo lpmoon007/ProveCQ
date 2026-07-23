@@ -7,6 +7,7 @@ import { PageHero } from "@/components/PageParts";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/free-tools/4am-test" },
   title:
     "The 4 AM Test — Will They Deliver, or Will You Wake Up Wondering?",
   description:

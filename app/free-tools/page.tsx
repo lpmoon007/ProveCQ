@@ -7,6 +7,7 @@ import { PageHero } from "@/components/PageParts";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/free-tools" },
   title: "Free People-Decision Tools for Founders & CEOs",
   description:
     "Free tools for founders and CEOs: the 2-minute Certainty Diagnostic, the 4 AM Test, the Hidden Gem Identifier, the Get to Green readiness map, the Cost of a Bad Bet calculator, and the Talent Development Scorecard.",

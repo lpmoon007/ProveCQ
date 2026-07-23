@@ -6,6 +6,7 @@ import { Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/for-eos" },
   title: "Prove for EOS — Make the Capacity Box Real",
   description:
     "EOS scores every seat on GWC — but Capacity is treated as a yes/no checkbox. Prove measures the behavioral truth of capacity (Initiative, Applied Grit, Learnability) so EOS leaders and Implementers stop mis-placing people.",

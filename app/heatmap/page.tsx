@@ -6,6 +6,7 @@ import Heatmap from "@/components/Heatmap";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/heatmap" },
   title: "The CQ Heatmap — See Your Whole Team in Black and White",
   description:
     "An interactive CQ Heatmap: a team roster scored on Initiative, Applied Grit, and Learnability, with a per-person CQ score, tier, recommended founder action, and risk note.",

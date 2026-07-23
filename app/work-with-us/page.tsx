@@ -6,6 +6,7 @@ import { PageHero } from "@/components/PageParts";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/work-with-us" },
   title: "Work With Us — Run Prove With Your Team",
   description:
     "Three ways to work with Prove: a done-with-you Prove sprint for your next big people decision, ongoing Better Every Day for your proven players, and a partner track for EOS Implementers. Start with a call.",

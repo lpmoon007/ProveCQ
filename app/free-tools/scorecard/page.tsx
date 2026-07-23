@@ -6,6 +6,7 @@ import { MoreFreeTools } from "@/components/RelatedLinks";
 import TalentScorecard from "@/components/TalentScorecard";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/free-tools/scorecard" },
   title:
     "Talent Development Scorecard — Are You Growing Your Best People?",
   description:

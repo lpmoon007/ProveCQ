@@ -7,6 +7,7 @@ import { PageHero } from "@/components/PageParts";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/certainty-gap" },
   title: "The Leadership Certainty Gap — Why Most Leaders Are Guessing",
   description:
     "The Certainty Gap is the distance between the people decisions you have to make and the proof you actually have. It taxes speed, clarity, and confidence. Here's what it costs — and how behavioral proof closes it.",

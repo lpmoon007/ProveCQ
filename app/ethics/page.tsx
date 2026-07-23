@@ -5,6 +5,7 @@ import { Container, Eyebrow, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ethics" },
   title: "What CQ Is & Isn't — Ethics & Fair Use",
   description:
     "The Commitment Quotient is a behavioral measurement, not a psychometric or personality test — and not a measure of a person's worth. A low CQ is not 'bad'; it just is. Our principles for using CQ fairly.",

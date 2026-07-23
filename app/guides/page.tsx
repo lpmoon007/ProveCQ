@@ -6,6 +6,7 @@ import { Container, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/guides" },
   title: "Guides — People Decisions, Promotions, Hiring & Retention",
   description:
     "Practical guides for founders and CEOs on the hardest people decisions: who to promote, who to hire, how to measure commitment and capacity, and how to keep your best people. Behavioral proof over guesswork.",

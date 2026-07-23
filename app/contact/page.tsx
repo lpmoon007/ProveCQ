@@ -6,6 +6,7 @@ import ContactForm from "@/components/ContactForm";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "Book a Call — Prove",
   description:
     "Book a 20-minute call to see how Prove would run your next big people decision — a promotion, a key hire, a project handoff. Bring your hardest call; leave with a plan.",

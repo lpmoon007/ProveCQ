@@ -1,8 +1,13 @@
+import type { Metadata } from "next";
 import { ButtonLink, Container, Eyebrow, Section } from "@/components/ui";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import MiniHeatmap from "@/components/MiniHeatmap";
 import { site } from "@/lib/site";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const CERTAINTY_COSTS = [
   {
@@ -71,8 +76,8 @@ const FLYWHEEL = [
 ];
 
 const CERTAINTY_STATS = [
-  { big: "6-figure", body: "mis-promotion, avoided — the cost of betting wrong on one leader." },
-  { big: "40+", body: "behavioral datapoints in six weeks — the law of large numbers, not one gut call." },
+  { big: "6-figure", body: "the illustrative cost of one wrong senior-leader bet — what Prove is built to help you avoid." },
+  { big: "40+", body: "behavioral datapoints in six weeks — many independent reads, not one gut call." },
   { big: "Promote fast", body: "— and without regret. Proof replaces the second-guessing." },
 ];
 
@@ -189,8 +194,8 @@ export default function HomePage() {
                 360s are slow and vague. Performance reviews look backward.
                 Engagement surveys don&rsquo;t measure behavior. Personality tests
                 are a paper exam for driving — you can pass without ever touching
-                the wheel. Prove is the test drive. It scores three behaviors that
-                actually predict who delivers:
+                the wheel. Prove is the test drive. It scores three behaviors
+                we&rsquo;ve found predict who delivers:
               </p>
               <div className="flex flex-col gap-3">
                 {TRAITS.map((t) => (
@@ -296,6 +301,49 @@ export default function HomePage() {
           </div>
         </Container>
       </Section>
+
+      {/* WHAT YOU GET */}
+      <section className="bg-paper-2 px-5 py-16 sm:px-8 md:py-[84px]">
+        <Container className="max-w-[900px]">
+          <div className="mb-9 max-w-[720px]">
+            <Eyebrow>What you actually get</Eyebrow>
+            <h2 className="mb-3 mt-3.5 font-display text-[30px] font-bold leading-[1.1] tracking-[-.02em] sm:text-[38px]">
+              A guided six-week engagement &mdash; not software to run yourself.
+            </h2>
+            <p className="m-0 text-[17px] leading-[1.6] text-content-muted">
+              You bring the people and the decision. We run the read with you and
+              hand you something you can act on &mdash; then you make the call.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <div className="rounded-2xl border border-edge-light bg-white p-[26px]">
+              <h3 className="mb-2 text-[17px] font-bold">Run with you</h3>
+              <p className="m-0 text-[14.5px] leading-[1.55] text-[#615B4F]">
+                A Prove cycle is done <em>with</em> your team over ~6 weeks &mdash;
+                Snapshot, Validation, and a Decision debrief. Not a login you&rsquo;re
+                left to operate alone.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-edge-light bg-white p-[26px]">
+              <h3 className="mb-2 text-[17px] font-bold">What you keep</h3>
+              <p className="m-0 text-[14.5px] leading-[1.55] text-[#615B4F]">
+                A per-person CQ read and a team{" "}
+                <a href="/heatmap" className="text-green">CQ Heatmap</a> with a
+                promote / coach / develop-first view &mdash; behavioral evidence for
+                your next people decision.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-edge-light bg-white p-[26px]">
+              <h3 className="mb-2 text-[17px] font-bold">Scope &amp; pricing</h3>
+              <p className="m-0 text-[14.5px] leading-[1.55] text-[#615B4F]">
+                Priced per engagement by team size and scope. The fastest way to a
+                number is a short call &mdash; we&rsquo;ll map your certainty gap and
+                what a cycle would cost.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
 
       {/* FLYWHEEL */}
       <Section tone="ink">
@@ -405,6 +453,11 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+          <p className="mx-auto mb-9 max-w-[680px] text-center text-[13px] leading-[1.55] text-content-faint">
+            These figures reflect Be Legendary&rsquo;s 25-year leadership-advisory
+            track record — the team behind Prove — not results from the Prove
+            assessment itself, which is a newer method.
+          </p>
           <div className="mb-9 grid grid-cols-1 gap-4 md:grid-cols-2">
             {TESTIMONIALS.map((t) => (
               <div

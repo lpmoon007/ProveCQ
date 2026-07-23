@@ -37,7 +37,7 @@ export const DEMO_PROFILE: ScoringProfile = {
   tierBands: { investmentReady: 7, coach: 5 },
 };
 
-export type Tier = "Investment-ready" | "Coach" | "Don't bet yet";
+export type Tier = "Investment-ready" | "Coach" | "Develop first";
 export type Signal = "green" | "yellow" | "red";
 
 export interface Person {
@@ -89,7 +89,7 @@ export const SIGNAL_EMOJI: Record<Signal, string> = {
 export function tierFor(cq: number, profile = DEMO_PROFILE): Tier {
   if (cq >= profile.tierBands.investmentReady) return "Investment-ready";
   if (cq >= profile.tierBands.coach) return "Coach";
-  return "Don't bet yet";
+  return "Develop first";
 }
 
 /** Composite color follows the tier bands. */

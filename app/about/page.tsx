@@ -7,6 +7,7 @@ import { PageHero } from "@/components/PageParts";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about" },
   title: "About — Prove & the Commitment Quotient",
   description:
     "Prove is built by James Carter, creator of the Flag Model and author of the forthcoming Lost Disciplines of Leadership, featured in CNN and Business Insider. The Commitment Quotient turns behavior into proof for the people decisions that matter most.",
