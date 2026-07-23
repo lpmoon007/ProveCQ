@@ -2,8 +2,9 @@ import { site } from "./site";
 
 /**
  * Canonical author entity for the site's editorial content.
- * `sameAs` should list James Carter's public profiles (e.g. LinkedIn) once
- * confirmed — it strengthens the Person entity for E-E-A-T / knowledge graph.
+ * `sameAs` lists James Carter's confirmed public profiles — it strengthens the
+ * Person entity for E-E-A-T / knowledge graph and helps disambiguate this
+ * James Carter from others. Add more confirmed profiles here as they're verified.
  */
 export const AUTHOR = {
   name: "James Carter",
@@ -11,7 +12,7 @@ export const AUTHOR = {
   // Relative path for on-page links; absolute `url` for schema.
   path: "/author/james-carter",
   url: `${site.domain}/author/james-carter`,
-  sameAs: [site.parentUrl] as string[],
+  sameAs: [site.parentUrl, "https://www.linkedin.com/in/jlcarter"] as string[],
 };
 
 /** Content was published together at launch; updated as pages are revised. */

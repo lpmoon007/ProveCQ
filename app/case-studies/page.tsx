@@ -6,6 +6,7 @@ import { Container, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/case-studies" },
   title: "Case Studies — Behavior Change That Moved the Business",
   description:
     "Real leadership patterns that created measurable operating constraints — and what changed when the behavior did. How the Commitment Quotient exposes why capable people underdeliver, and how targeted behavior change shows up in decisions, accountability, and execution.",

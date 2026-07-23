@@ -10,12 +10,12 @@ const ROWS: {
   cq: string;
   cqColor: string;
 }[] = [
-  { name: "Alexi M.", init: "green", grit: "green", learn: "green", cq: "8.8", cqColor: "#2E9E5B" },
-  { name: "Curtis D.", init: "green", grit: "green", learn: "yellow", cq: "9.0", cqColor: "#2E9E5B" },
-  { name: "Adrian B.", init: "green", grit: "yellow", learn: "green", cq: "6.8", cqColor: "#E0A73E" },
-  { name: "Avery Z.", init: "yellow", grit: "yellow", learn: "red", cq: "4.8", cqColor: "#E0A73E" },
-  { name: "Blake C.", init: "red", grit: "red", learn: "yellow", cq: "4.3", cqColor: "#D0492E" },
-  { name: "Barry M.", init: "red", grit: "red", learn: "red", cq: "2.8", cqColor: "#D0492E" },
+  { name: "Alexi M.", init: "green", grit: "green", learn: "green", cq: "9", cqColor: "#2E9E5B" },
+  { name: "Curtis D.", init: "green", grit: "green", learn: "yellow", cq: "9", cqColor: "#2E9E5B" },
+  { name: "Adrian B.", init: "green", grit: "yellow", learn: "green", cq: "7", cqColor: "#E0A73E" },
+  { name: "Avery Z.", init: "yellow", grit: "yellow", learn: "red", cq: "5", cqColor: "#E0A73E" },
+  { name: "Blake C.", init: "red", grit: "red", learn: "yellow", cq: "4", cqColor: "#D0492E" },
+  { name: "Barry M.", init: "red", grit: "red", learn: "red", cq: "3", cqColor: "#D0492E" },
 ];
 
 const GRID = "grid grid-cols-[1.4fr_repeat(3,1fr)_.7fr]";
@@ -59,7 +59,7 @@ export default function MiniHeatmap() {
       ))}
 
       <div className="mt-4 border-t border-[#1E1B13] pt-3.5 text-[12.5px] text-[#6E6A5C]">
-        Investment-ready. Coach. Or don&rsquo;t bet. You see it, not sense it.{" "}
+        Investment-ready. Coach. Or develop first. You see it, not sense it.{" "}
         <Link href="/heatmap" className="text-green-soft hover:text-green-soft">
           See the live demo &rarr;
         </Link>

@@ -6,6 +6,7 @@ import { MoreFreeTools } from "@/components/RelatedLinks";
 import CostOfBadBet from "@/components/CostOfBadBet";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/free-tools/cost-of-a-bad-bet" },
   title: "Cost of a Bad Bet — People Decision ROI Calculator",
   description:
     "Estimate what one wrong promotion or bad hire actually costs your company — salary, lost productivity, backfill, and team drag — and what proving the decision first could save. Free interactive calculator.",

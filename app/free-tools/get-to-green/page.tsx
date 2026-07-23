@@ -6,6 +6,7 @@ import { MoreFreeTools } from "@/components/RelatedLinks";
 import GetToGreen from "@/components/GetToGreen";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/free-tools/get-to-green" },
   title: "Get to Green — The 146-Point People-Systems Readiness Map",
   description:
     "Get to Green scores all 7 macro and 30+ micro people systems red, yellow, or green — a category-weighted readiness map that shows exactly where your company is exposed as you scale, and what to fix first.",

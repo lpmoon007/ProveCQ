@@ -53,6 +53,7 @@ const orgJsonLd = {
   legalName: "Be Legendary",
   url: site.domain,
   description: site.description,
+  sameAs: site.orgSameAs,
   brand: { "@type": "Brand", name: "Commitment Quotient" },
   parentOrganization: {
     "@type": "Organization",

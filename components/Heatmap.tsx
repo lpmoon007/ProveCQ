@@ -13,7 +13,7 @@ import {
 
 type SortKey = "cq" | "initiative" | "applied_grit" | "learnability";
 
-const TIERS: (Tier | "All")[] = ["All", "Investment-ready", "Coach", "Don't bet yet"];
+const TIERS: (Tier | "All")[] = ["All", "Investment-ready", "Coach", "Develop first"];
 const SORTS: { key: SortKey; label: string }[] = [
   { key: "cq", label: "CQ" },
   { key: "initiative", label: "Init" },
@@ -106,7 +106,7 @@ export default function Heatmap() {
                 className="text-center font-display text-[15px] font-bold"
                 style={{ color: cqColor(p.cq) }}
               >
-                {p.cq.toFixed(2)}
+                {Math.round(p.cq)}
               </span>
             </button>
           ))}
@@ -125,7 +125,7 @@ export default function Heatmap() {
               { label: "Initiative", val: sel.initiative, accent: false },
               { label: "A. Grit", val: sel.applied_grit, accent: false },
               { label: "Learn", val: sel.learnability, accent: false },
-              { label: "CQ", val: sel.cq.toFixed(2), accent: true },
+              { label: "CQ", val: Math.round(sel.cq), accent: true },
             ].map((cell) => (
               <div
                 key={cell.label}

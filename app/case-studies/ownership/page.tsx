@@ -7,6 +7,7 @@ import { Container, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/case-studies/ownership" },
   title: "Case Study: From Reliable Executor to Enterprise Leader",
   description:
     "A dependable operations leader rarely moved before consensus, returning unresolved issues to the executive team. How forming a position, sizing decisions by reversibility, and making ownership visible gave the organization speed without losing his collaborative style.",

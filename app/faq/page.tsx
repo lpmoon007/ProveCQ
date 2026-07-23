@@ -8,6 +8,7 @@ import { PageHero } from "@/components/PageParts";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/faq" },
   title:
     "Prove & Commitment Quotient — Frequently Asked Questions",
   description:

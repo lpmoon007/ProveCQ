@@ -7,6 +7,7 @@ import { Container, Section } from "@/components/ui";
 import { PageHero, CTASection } from "@/components/PageParts";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/case-studies/snapshot" },
   title: "Sample Deliverable: A CQ Snapshot Report",
   description:
     "See the actual deliverable: a sample CQ Snapshot scoring a team of HVAC technicians on Initiative, Applied Grit, and Learnability — with zones, profiles, and a recommended leadership move for each person. A behavioral read for development and investment decisions.",

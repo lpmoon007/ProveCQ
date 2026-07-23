@@ -11,15 +11,21 @@ import { site } from "@/lib/site";
 const CANONICAL = "/guides/founder-dependence";
 
 export const metadata: Metadata = {
-  title: "Founder Dependence: Fix Owner-Dependent Business Risk",
+  title: "Founder Dependency: How to Reduce Owner-Dependent Business Risk",
   description:
-    "Founder dependence is when your business stalls — or is worth far less — without you. Learn how to spot key-person risk and reduce owner dependence for good.",
+    "Founder dependency (or founder dependence) is when your business stalls — or is worth far less — without you. How to spot key-person risk, break founder dependency, and reduce owner dependence for good.",
   keywords: [
+    "founder dependency",
     "founder dependence",
+    "owner dependency",
     "owner dependent business",
     "key person risk",
     "key man risk",
+    "break founder dependency",
+    "reduce founder dependency",
     "reduce owner dependence",
+    "founder dependent sales",
+    "business too dependent on owner",
   ],
   alternates: { canonical: CANONICAL },
   openGraph: {
@@ -86,6 +92,14 @@ const FAQ = [
     q: "How do you know if your business is too dependent on you?",
     a: "Take a real week off and watch what happens. If decisions pile up waiting for you, if clients ask for you by name and accept no substitute, and if output dips the moment you disengage, the business is too dependent on you. The clearest test is whether it keeps delivering when you step back — not whether it can survive a long weekend.",
   },
+  {
+    q: "How do you break founder dependency?",
+    a: "You break founder dependency the same way you reduce it — by transferring the founder's judgment and relationships to proven people, one critical responsibility at a time. Name the work only you can do today, put a specific person on each piece, and prove they can carry it before you hand it over for good. 'Break' implies a single moment, but in practice it is a staged handoff: you step back on purpose, watch what holds, and fix the gaps that surface while you are still there to coach them.",
+  },
+  {
+    q: "What is founder-dependent sales, and why is it dangerous?",
+    a: "Founder-dependent sales — sometimes called founder-led sales concentration — is when the founder personally closes the important deals and holds the key customer relationships. It is common and often effective early on, but it is a concentrated form of founder dependency: pipeline and revenue run through one person, so growth is capped at the founder's calendar and the business is fragile if they step back. Reducing it means proving that other people can build trust and close — then routing relationships to the team early, so customers trust the company, not only the founder.",
+  },
 ];
 
 const faqJsonLd = {
@@ -109,11 +123,11 @@ export default function FounderDependencePage() {
       <PageHero
         crumb="Guides › Founder dependence"
         eyebrow="Ownership"
-        title={<>Founder dependence: when the business can&rsquo;t run without you.</>}
+        title={<>Founder dependency: when the business can&rsquo;t run without you.</>}
       >
         If the work stalls when you step back &mdash; or the business is worth far
-        less the moment you leave &mdash; you have founder dependence. It is
-        fixable, but not with heroics.
+        less the moment you leave &mdash; you have founder dependency (also called
+        founder dependence or owner dependency). It is fixable, but not with heroics.
       </PageHero>
 
       <ArticleMeta
@@ -132,12 +146,12 @@ export default function FounderDependencePage() {
           <div className="mx-auto max-w-[760px] rounded-[20px] bg-ink px-8 py-8 text-paper on-dark sm:px-[34px]">
             <Eyebrow tone="soft">The short answer</Eyebrow>
             <p className="m-0 mt-3 text-[18px] leading-[1.65] text-[#D8D4C6]">
-              Founder dependence is when a business cannot run well &mdash; or is
-              worth far less &mdash; without one person. It is an operational
-              fragility and a valuation problem at once. The cure is not working
-              harder; it is transferring your judgment and relationships to a
-              bench of proven people, so the business keeps delivering when you
-              step back.
+              Founder dependency &mdash; also written founder dependence or owner
+              dependency &mdash; is when a business cannot run well, or is worth far
+              less, without one person. It is an operational fragility and a
+              valuation problem at once. The cure is not working harder; it is
+              transferring your judgment and relationships to a bench of proven
+              people, so the business keeps delivering when you step back.
             </p>
           </div>
         </Container>
@@ -236,12 +250,14 @@ export default function FounderDependencePage() {
         <Container>
           <div className="mx-auto max-w-[760px]">
             <h2 className="mb-4 font-display text-[28px] font-bold tracking-[-.02em] sm:text-[34px]">
-              How to reduce founder dependence
+              How to reduce &mdash; and break &mdash; founder dependency
             </h2>
             <p className="m-0 mb-6 text-[17px] leading-[1.65] text-content-muted">
-              Reducing founder dependence is a transfer, not a sacrifice. You are
+              Reducing founder dependency is a transfer, not a sacrifice. You are
               moving critical work off one desk and onto a bench of people who have
-              earned it. In practice it looks like a checklist:
+              earned it. You do not break founder dependency by working less; you
+              break it by proving someone else can carry the load. In practice it
+              looks like a checklist:
             </p>
             <ul className="m-0 flex list-none flex-col gap-3 p-0">
               {REDUCERS.map((c) => (

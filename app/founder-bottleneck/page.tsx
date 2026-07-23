@@ -68,8 +68,8 @@ const SPOKES = [
     href: "/guides/when-to-hire-a-second-in-command",
   },
   {
-    h: "Founder dependence & key-person risk",
-    b: "The quiet tax on your growth and your valuation — and how to reduce it.",
+    h: "Founder dependency & key-person risk",
+    b: "The valuation and resilience angle: the quiet tax owner dependency puts on what your company is worth — and how to reduce it.",
     href: "/guides/founder-dependence",
   },
   {

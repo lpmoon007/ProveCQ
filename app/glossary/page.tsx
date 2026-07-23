@@ -7,6 +7,7 @@ import { Container, Section, ButtonLink } from "@/components/ui";
 import { PageHero } from "@/components/PageParts";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/glossary" },
   title:
     "People-Decision Glossary — Commitment, Capacity, Retention Terms",
   description:

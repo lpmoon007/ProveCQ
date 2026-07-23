@@ -8,6 +8,7 @@ import CQDiagram from "@/components/CQDiagram";
 import SprintTimeline from "@/components/SprintTimeline";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/how-it-works" },
   title: "How Prove Works — Behavioral Proof in Six Weeks",
   description:
     "Prove turns guesswork into behavioral proof: a 15-minute Snapshot, a six-week Validation under real pressure (40+ datapoints), and a clear Decision on who to promote, coach, or wait on. Proof over paper tests.",
