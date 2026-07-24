@@ -294,7 +294,7 @@ export default function PeopleDecisionsByTheNumbersPage() {
               <a
                 href="https://www.gallup.com/services/182138/state-american-manager.aspx"
                 target="_blank"
-                rel="noopener nofollow"
+                rel="noopener"
               >
                 gallup.com
               </a>
@@ -307,7 +307,7 @@ export default function PeopleDecisionsByTheNumbersPage() {
               <a
                 href="https://www.americanprogress.org/article/there-are-significant-business-costs-to-replacing-employees/"
                 target="_blank"
-                rel="noopener nofollow"
+                rel="noopener"
               >
                 americanprogress.org
               </a>
@@ -318,7 +318,7 @@ export default function PeopleDecisionsByTheNumbersPage() {
               <a
                 href="https://workinstitute.com/retention-reports/"
                 target="_blank"
-                rel="noopener nofollow"
+                rel="noopener"
               >
                 workinstitute.com
               </a>
@@ -330,7 +330,7 @@ export default function PeopleDecisionsByTheNumbersPage() {
               <a
                 href="https://www.mckinsey.com/featured-insights/leadership/why-leadership-development-programs-fail"
                 target="_blank"
-                rel="noopener nofollow"
+                rel="noopener"
               >
                 mckinsey.com
               </a>
@@ -343,7 +343,7 @@ export default function PeopleDecisionsByTheNumbersPage() {
               <a
                 href="https://www.mckinsey.com/featured-insights/leadership/whats-missing-in-leadership-development"
                 target="_blank"
-                rel="noopener nofollow"
+                rel="noopener"
               >
                 mckinsey.com
               </a>

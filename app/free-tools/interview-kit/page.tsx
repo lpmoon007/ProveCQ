@@ -32,15 +32,17 @@ export const metadata: Metadata = {
   },
 };
 
-const softwareJsonLd = {
+// A WebApplication/SoftwareApplication rich result requires aggregateRating or
+// review — which we won't fabricate for a free tool — so validators flag it as an
+// error. Describe it as a free WebPage instead: valid, honest, no rating gate.
+const pageJsonLd = {
   "@context": "https://schema.org",
-  "@type": "WebApplication",
+  "@type": "WebPage",
   name: "The CQ Interview Kit",
-  applicationCategory: "BusinessApplication",
-  operatingSystem: "Any (web)",
-  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
   description: DESCRIPTION,
   url: "https://provecq.com/free-tools/interview-kit",
+  isAccessibleForFree: true,
+  isPartOf: { "@type": "WebSite", name: "Prove", url: "https://provecq.com" },
 };
 
 export default function InterviewKitPage() {
@@ -48,7 +50,7 @@ export default function InterviewKitPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
       />
       <Nav />
       <PageHero
